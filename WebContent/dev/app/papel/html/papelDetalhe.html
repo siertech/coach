@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$papelDetalheCtrl.data.saveFunction($papelDetalheCtrl.data.item)"
+	   delete-function = "$papelDetalheCtrl.data.deleteFunction($papelDetalheCtrl.data.item)"
+	   item = "$papelDetalheCtrl.data.item"
+	   cancel-function = "$papelDetalheCtrl.data.cancelFunction()"
+	   loading = "$papelDetalheCtrl.data.loading"
+	   title  = "{{$papelDetalheCtrl.data.item.descricao|| 'Cadastro de novo Item'}}">
+	   
+	   <papel-form></papel-form>
+</st-detalhe>

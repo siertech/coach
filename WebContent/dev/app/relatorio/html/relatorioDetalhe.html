@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$relatorioDetalheCtrl.data.saveFunction($relatorioDetalheCtrl.data.item)"
+	   delete-function = "$relatorioDetalheCtrl.data.deleteFunction($relatorioDetalheCtrl.data.item)"
+	   item = "$relatorioDetalheCtrl.data.item"
+	   cancel-function = "$relatorioDetalheCtrl.data.cancelFunction()"
+	   loading = "$relatorioDetalheCtrl.data.loading"
+	   title  = "{{$relatorioDetalheCtrl.data.item.descricao || 'Cadastro de novo Item'}}">
+	    <div layout="row">
+		  <st-nav active-tab="$relatorioDetalheCtrl.tab"  tabs="[{label:'Detalhes'}, {label:'Visualização'}]" </st-nav>
+	    </div>
+	    
+	    <md-content ng-show="$relatorioDetalheCtrl.tab==0" class="md-padding">
+             <relatorio-form></relatorio-form>
+        </md-content>
+        
+        <md-content layout-align="center center" layout="row" ng-if="$relatorioDetalheCtrl.tab==1" class="md-padding">
+             <span flex></span>
+             <div flex="90">
+	             <st-chart 
+	            	 label-filter="{{$relatorioDetalheCtrl.data.item.labelFilter}}"
+	                 de="'1991-05-01'" 
+	                 ate="'3000-05-02'" 
+	                 order-by="{{$relatorioDetalheCtrl.data.item.orderBy}}"
+	                 querys = "$relatorioDetalheCtrl.data.item.querys"
+	                 max = "{{$relatorioDetalheCtrl.data.item.max}}"
+	                 value-column="{{$relatorioDetalheCtrl.data.item.valueColumn}}"
+	                 label-column="{{$relatorioDetalheCtrl.data.item.labelColumn}}"
+	                 period-column="{{$relatorioDetalheCtrl.data.item.periodColumn}}"
+	                 object-name="{{$relatorioDetalheCtrl.data.item.objectName}}"
+	                ></st-chart>
+                </div>
+                <span flex></span>
+              
+        </md-content>
+           
+	   
+</st-detalhe>

@@ -1,0 +1,47 @@
+﻿<meta charset="UTF-8" />
+<md-card style="padding-top: 15px;">
+        <md-toolbar class="md-table-toolbar md-default">
+	          <div layout="row" class="md-toolbar-tools"  layout-wrap>
+		           <div flex="20"  hide-xs md-hide-xs>
+					   <md-button class="add-button md-raised" ng-click="$ritualListCtrl.data.openDetail()" class="md-raised">Cadastrar</md-button>
+			       </div>
+				   <st-filter  
+				         flex-xs="80" 
+				         flex="60"
+						 query-options = "$ritualListCtrl.data.requestListParams"
+						 get-list = "$ritualListCtrl.data.getList"
+						 filtros="$ritualListCtrl.data.filtros"
+						>
+				   </st-filter>
+	   			<view-chose flex="10" view-type="config.confs.viewType" ></view-chose>
+	          </div>
+         </md-toolbar>
+</md-card>
+
+	<float-button-add class="float-add-button" tooltip-label="Cadastrar novo ritual" ng-click="$ritualListCtrl.data.openDetail()" ></float-button-add>
+	<div layout="row" style="margin:8px">
+	    <md-progress-linear
+	          flex
+	          ng-if="$ritualListCtrl.data.loading===true"
+	          md-mode="indeterminate">
+	    </md-progress-linear>
+	</div>
+	
+	<st-selected-items-actions 
+	   delete-function="$ritualListCtrl.data.deleteFunction($ritualListCtrl.data.getSelectedItemsIds())" 
+	   selected-items="$ritualListCtrl.data.selectedItems">
+	</st-selected-items-actions>
+	 
+ 	<ritual-grid-view ng-show="config.confs.viewType=='grid'" ></ritual-grid-view>
+ 	<ritual-table-view  ng-show="config.confs.viewType=='table'" ></ritual-table-view>
+	
+	<div ng-if="$ritualListCtrl.data.objetos.length==0">
+	    <p class="text-muted">Nenhum item encontrado</p>
+    </div>
+   
+    <st-filter-pagination
+	     total-itens="$ritualListCtrl.data.totalItens" 
+	     itens-in-page="$ritualListCtrl.data.objetos.length" 
+	     get-list="$ritualListCtrl.data.getList" 
+	     query-options="$ritualListCtrl.data.requestListParams"  >
+    </st-filter-pagination>

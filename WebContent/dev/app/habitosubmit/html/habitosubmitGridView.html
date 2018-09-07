@@ -1,0 +1,43 @@
+<meta charset="UTF-8" />
+<div  layout="row" >
+     <span flex></span>
+    <md-card flex="70">
+      <md-card-content>
+           <div layout="row" layout-align="center center">
+              <h2><ng-md-icon md-colors="{color: 'green'}"  icon="check"></ng-md-icon> Verificador de hábitos</h2>
+           </div>
+           <div flex="100" flex-xs="100" >
+			      <md-checkbox  ng-true-value="1" ng-false-value="0" ng-model="$habitosubmitListCtrl.verSomenteNaoCumpridos">Visualizar somente hábitos não cumpridos</md-checkbox>
+			   </div>
+		  <md-list flex>
+		       <md-subheader class="md-no-sticky">
+		           Hábitos em  {{$habitosubmitListCtrl.today|date:'dd/MM/yyyy'}} [{{$habitosubmitListCtrl.mergedHabits.length}}]
+		       </md-subheader>
+		       
+		       <div ng-show="!$habitosubmitListCtrl.verSomenteNaoCumpridos==1 || (item.submitedInToday==false || !item.submitedInToday)"   id="merged-habits-index-{{$index}}" ng-repeat="item in $habitosubmitListCtrl.mergedHabits | orderBy :'categoria'  | habitoGroupBy:'categoria' ">
+			             <md-subheader  ng-show="item.categoria_CHANGED" class="md-no-sticky">
+			                <ng-md-icon icon="stars" md-colors="{color: 'green'}"></ng-md-icon> {{item.categoria|| 'Outros'}}
+			             </md-subheader>
+			   <md-list-item >
+		        <md-checkbox ng-change="$habitosubmitListCtrl.changeSubmit(item)" ng-model="item.submitedInToday" ng-true-value="true" ng-false-value="false" class="submitedInToday"></md-checkbox>
+		        <md-tooltip>{{item.meta.titulo}}</md-tooltip>
+		        <p ng-class="{'riscado':  item.submitedInToday==true}"> {{item.titulo}}  </p>
+		        
+		         <md-divider></md-divider>
+		         <md-button class="md-primary md-hue-2" aria-label="Profile">
+				        {{item.submitedDays}} dias
+				 </md-button>
+		          <md-divider></md-divider>
+		      
+		       </md-list-item>
+		       </div>
+		  </md-list>
+	  </md-card-content>
+  </md-card>
+  <span flex></span>
+</div>
+
+ 
+
+   
+      

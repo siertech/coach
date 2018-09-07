@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$avaliacaopapelDetalheCtrl.data.saveFunction($avaliacaopapelDetalheCtrl.data.item)"
+	   delete-function = "$avaliacaopapelDetalheCtrl.data.deleteFunction($avaliacaopapelDetalheCtrl.data.item)"
+	   item = "$avaliacaopapelDetalheCtrl.data.item"
+	   cancel-function = "$avaliacaopapelDetalheCtrl.data.cancelFunction()"
+	   loading = "$avaliacaopapelDetalheCtrl.data.loading"
+	   title  = "{{$avaliacaopapelDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <avaliacaopapel-form></avaliacaopapel-form>
+</st-detalhe>

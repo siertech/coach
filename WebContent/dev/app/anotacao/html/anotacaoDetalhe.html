@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$anotacaoDetalheCtrl.data.saveFunction($anotacaoDetalheCtrl.data.item)"
+	   delete-function = "$anotacaoDetalheCtrl.data.deleteFunction($anotacaoDetalheCtrl.data.item)"
+	   item = "$anotacaoDetalheCtrl.data.item"
+	   cancel-function = "$anotacaoDetalheCtrl.data.cancelFunction()"
+	   loading = "$anotacaoDetalheCtrl.data.loading"
+	   title  = "{{$anotacaoDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <anotacao-form></anotacao-form>
+</st-detalhe>

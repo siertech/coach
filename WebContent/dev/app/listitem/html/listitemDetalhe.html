@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$listitemDetalheCtrl.data.saveFunction($listitemDetalheCtrl.data.item)"
+	   delete-function = "$listitemDetalheCtrl.data.deleteFunction($listitemDetalheCtrl.data.item)"
+	   item = "$listitemDetalheCtrl.data.item"
+	   cancel-function = "$listitemDetalheCtrl.data.cancelFunction()"
+	   loading = "$listitemDetalheCtrl.data.loading"
+	   title  = "{{$listitemDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <listitem-form></listitem-form>
+</st-detalhe>

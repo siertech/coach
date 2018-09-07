@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+	
+	
+    
+    <property name = "connection.username">root</property>
+    <property name = "connection.password">leghacy123</property>
+    
+	<mapping class="habito.Habito" />
+	<mapping class="avaliacaopapel.AvaliacaoPapel" />
+	<mapping class="evidencia.Evidencia" />
+	<mapping class="valor.Valor" />
+	<mapping class="trilha.Trilha" />
+	<mapping class="papel.Papel" />
+	<mapping class="missao.Missao" />
+	<mapping class="meta.Meta" />
+	<mapping class="missao.Missao" />
+	
+	<!-- Mapemaneto de classes da API -->
+	<mapping class="com.siertech.stapi.pessoa.Pessoa" />
+	<mapping class="com.siertech.stapi.operadorsistema.OperadorSistema" />
+    <mapping class="com.siertech.stapi.config.Config" />
+	<mapping class="com.siertech.stapi.usersystem.UserSystem" />
+	<mapping class="com.siertech.stapi.filial.Filial" />
+	<mapping class="com.siertech.stapi.estadoscidades.Estado" />
+	<mapping class="com.siertech.stapi.estadoscidades.Cidade" />
+    <mapping class="com.siertech.stapi.opcao.Opcao" />
+    <mapping class="com.siertech.stapi.prototipo.Prototipo" />
+	<mapping class="com.siertech.stapi.versaoprototipo.VersaoPrototipo" />
+    	
+    
+		<mapping class="habitosubmit.HabitoSubmit" />
+	<mapping class="metrica.Metrica" />
+	<mapping class="metricasubmit.MetricaSubmit" />
+	<mapping class="relatorio.Relatorio" />
+	<mapping class="anotacao.Anotacao" />
+	<mapping class="lembrancamarcante.LembrancaMarcante" />
+	<mapping class="diarioemocional.DiarioEmocional" />
+	<mapping class="rodadavida.RodaDaVida" />
+	<mapping class="fobia.Fobia" />
+	<mapping class="frequenciasonora.FrequenciaSonora" />
+	<mapping class="todaytask.TodayTask" />
+	<mapping class="ritual.Ritual" />
+	<mapping class="ritualitem.RitualItem" />
+	<mapping class="burndown.BurnDown" />
+	
+	
+	<mapping class="exercicio.Exercicio" />
+	<mapping class="diariosonho.DiarioSonho" />
+	<mapping class="buscatransderivacional.BuscaTransderivacional" />
+	<mapping class="comportamento.Comportamento" />
+	<mapping class="stepdescriptor.StepDescriptor" />
+	<mapping class="step.Step" />
+	<mapping class="stepitem.StepItem" />
+	<mapping class="list.List" />
+	<mapping class="listitem.ListItem" />
+	<mapping class="proscontras.ProsContras" />
+	<mapping class="proscontrasitem.ProsContrasItem" />
+	<mapping class="sprint.Sprint" />
+	<mapping class="tarefasprint.TarefaSprint" />
+</session-factory>
+</hibernate-configuration>

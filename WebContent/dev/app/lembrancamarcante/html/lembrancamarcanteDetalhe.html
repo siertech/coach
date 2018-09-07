@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$lembrancamarcanteDetalheCtrl.data.saveFunction($lembrancamarcanteDetalheCtrl.data.item)"
+	   delete-function = "$lembrancamarcanteDetalheCtrl.data.deleteFunction($lembrancamarcanteDetalheCtrl.data.item)"
+	   item = "$lembrancamarcanteDetalheCtrl.data.item"
+	   cancel-function = "$lembrancamarcanteDetalheCtrl.data.cancelFunction()"
+	   loading = "$lembrancamarcanteDetalheCtrl.data.loading"
+	   title  = "{{$lembrancamarcanteDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <lembrancamarcante-form></lembrancamarcante-form>
+</st-detalhe>

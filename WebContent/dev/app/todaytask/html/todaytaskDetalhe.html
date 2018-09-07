@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$todaytaskDetalheCtrl.data.saveFunction($todaytaskDetalheCtrl.data.item)"
+	   delete-function = "$todaytaskDetalheCtrl.data.deleteFunction($todaytaskDetalheCtrl.data.item)"
+	   item = "$todaytaskDetalheCtrl.data.item"
+	   cancel-function = "$todaytaskDetalheCtrl.data.cancelFunction()"
+	   loading = "$todaytaskDetalheCtrl.data.loading"
+	   title  = "{{$todaytaskDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <todaytask-form></todaytask-form>
+</st-detalhe>

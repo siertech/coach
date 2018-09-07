@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$diarioemocionalDetalheCtrl.data.saveFunction($diarioemocionalDetalheCtrl.data.item)"
+	   delete-function = "$diarioemocionalDetalheCtrl.data.deleteFunction($diarioemocionalDetalheCtrl.data.item)"
+	   item = "$diarioemocionalDetalheCtrl.data.item"
+	   cancel-function = "$diarioemocionalDetalheCtrl.data.cancelFunction()"
+	   loading = "$diarioemocionalDetalheCtrl.data.loading"
+	   title  = "{{$diarioemocionalDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <diarioemocional-form></diarioemocional-form>
+</st-detalhe>

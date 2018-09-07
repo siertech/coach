@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row"  layout-wrap flex >
+   <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="item in $stepitemListCtrl.data.objetos" >
+       <st-grid-item
+          icon="format_list_numbered" 
+          item="item" 
+          label="{{item.titulo}}"
+          delete-function="$stepitemListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$stepitemListCtrl.data.openDetail(item)">
+          
+       </st-grid-item>
+	  </div>
+</div>
+ 
+
+   
+      

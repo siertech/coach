@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$stepitemDetalheCtrl.data.saveFunction($stepitemDetalheCtrl.data.item)"
+	   delete-function = "$stepitemDetalheCtrl.data.deleteFunction($stepitemDetalheCtrl.data.item)"
+	   item = "$stepitemDetalheCtrl.data.item"
+	   cancel-function = "$stepitemDetalheCtrl.data.cancelFunction()"
+	   loading = "$stepitemDetalheCtrl.data.loading"
+	   title  = "{{$stepitemDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <stepitem-form></stepitem-form>
+</st-detalhe>

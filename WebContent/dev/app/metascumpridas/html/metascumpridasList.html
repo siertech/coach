@@ -1,0 +1,21 @@
+﻿<meta charset="UTF-8" />
+
+<md-card>
+    <md-card-title layout="column" layout-align="center center">
+      <h2 flex><ng-md-icon md-colors="{color: 'green'}" icon="star"></ng-md-icon> Últimas metas cumpridas</h2>
+       <md-subheader class="md-no-sticky">
+		          Você já alcançou  {{$metascumpridasListCtrl.data.objetos.length}} metas! Excelente trabalho!
+		       </md-subheader>
+    </md-card-title>
+    <md-card-content layout="column" layout-align="center center">
+         <md-list>
+               <md-list-item ng-repeat="meta in $metascumpridasListCtrl.data.objetos" >
+                  <ng-md-icon md-colors="{color: 'orange'}" icon="check_circle"></ng-md-icon>
+                 <p md-truncate> {{meta.titulo}} </p>
+                 <md-button class="md-primary">{{meta.dataQueFoiAlcancada|date: 'dd/MM/yyyy'}}</md-button><md-button class="md-warn">{{meta.daysSinceAlcancada}} dias </md-button>
+                 <span flex></span>
+                 <md-divider></md-divider>
+              </md-list-item>
+          </md-list>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,10 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="50" flex-xs="100"  label="Título da lista" ng-model="$listDetalheCtrl.data.item.titulo" ></st-input-string>
+   <st-check-list 
+         ng-if="$listDetalheCtrl.data.item.id"
+         label="Teste"
+		 attr-label="titulo" attr="ok" 
+		 crud-options = "{objectName: 'ListItem', fixProperties: {'lista.id':$listDetalheCtrl.data.item.id}}"
+	></st-check-list>
+</div>

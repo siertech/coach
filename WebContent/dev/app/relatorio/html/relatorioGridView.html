@@ -1,0 +1,33 @@
+<meta charset="UTF-8" />
+
+<div layout="row"  layout-wrap flex >
+   <div flex="33" flex-xs="100" flex-sm="50" ng-repeat="item in $relatorioListCtrl.data.objetos" >
+       <st-grid-item
+          icon="show_chart" 
+          item="item" 
+          label="{{item.descricao}}"
+          delete-function="$relatorioListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$relatorioListCtrl.data.openDetail(item)">
+          
+           <st-chart 
+	            	 label-filter="{{item.labelFilter}}"
+	                 de="'1991-05-01'" 
+	                 ate="'3000-05-02'" 
+	                 order-by="{{item.orderBy}}"
+	                 querys = "item.querys"
+	                 max = "{{item.max}}"
+	                 value-column="{{item.valueColumn}}"
+	                 label-column="{{item.labelColumn}}"
+	                 period-column="{{item.periodColumn}}"
+	                 object-name="{{item.objectName}}"
+	                ></st-chart>
+          
+       </st-grid-item>
+	  </div>
+</div>
+
+
+ 
+
+   
+      

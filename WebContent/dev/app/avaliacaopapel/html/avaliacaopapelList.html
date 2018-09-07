@@ -1,0 +1,47 @@
+﻿<meta charset="UTF-8" />
+<md-card style="padding-top: 15px;">
+        <md-toolbar class="md-table-toolbar md-default">
+	          <div layout="row" class="md-toolbar-tools"  layout-wrap>
+		           <div flex="20"  hide-xs md-hide-xs>
+					   <md-button class="add-button md-raised" ng-click="$avaliacaopapelListCtrl.data.openDetail()" class="md-raised">Cadastrar</md-button>
+			       </div>
+				   <st-filter  
+				         flex-xs="80" 
+				         flex="60"
+						 query-options = "$avaliacaopapelListCtrl.data.requestListParams"
+						 get-list = "$avaliacaopapelListCtrl.data.getList"
+						 filtros="$avaliacaopapelListCtrl.data.filtros"
+						>
+				   </st-filter>
+	   			<view-chose flex="10" view-type="config.confs.viewType" ></view-chose>
+	          </div>
+         </md-toolbar>
+</md-card>
+
+	<float-button-add class="float-add-button" tooltip-label="Cadastrar novo avaliacaopapel" ng-click="$avaliacaopapelListCtrl.data.openDetail()" ></float-button-add>
+	<div layout="row" style="margin:8px">
+	    <md-progress-linear
+	          flex
+	          ng-if="$avaliacaopapelListCtrl.data.loading===true"
+	          md-mode="indeterminate">
+	    </md-progress-linear>
+	</div>
+	
+	<st-selected-items-actions 
+	   delete-function="$avaliacaopapelListCtrl.data.deleteFunction($avaliacaopapelListCtrl.data.getSelectedItemsIds())" 
+	   selected-items="$avaliacaopapelListCtrl.data.selectedItems">
+	</st-selected-items-actions>
+	 
+ 	<avaliacaopapel-grid-view ng-show="config.confs.viewType=='grid'" ></avaliacaopapel-grid-view>
+ 	<avaliacaopapel-table-view  ng-show="config.confs.viewType=='table'" ></avaliacaopapel-table-view>
+	
+	<div ng-if="$avaliacaopapelListCtrl.data.objetos.length==0">
+	    <p class="text-muted">Nenhum item encontrado</p>
+    </div>
+   
+    <st-filter-pagination
+	     total-itens="$avaliacaopapelListCtrl.data.totalItens" 
+	     itens-in-page="$avaliacaopapelListCtrl.data.objetos.length" 
+	     get-list="$avaliacaopapelListCtrl.data.getList" 
+	     query-options="$avaliacaopapelListCtrl.data.requestListParams"  >
+    </st-filter-pagination>

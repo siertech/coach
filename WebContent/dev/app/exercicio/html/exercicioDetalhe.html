@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$exercicioDetalheCtrl.data.saveFunction($exercicioDetalheCtrl.data.item)"
+	   delete-function = "$exercicioDetalheCtrl.data.deleteFunction($exercicioDetalheCtrl.data.item)"
+	   item = "$exercicioDetalheCtrl.data.item"
+	   cancel-function = "$exercicioDetalheCtrl.data.cancelFunction()"
+	   loading = "$exercicioDetalheCtrl.data.loading"
+	   title  = "{{$exercicioDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <exercicio-form></exercicio-form>
+</st-detalhe>

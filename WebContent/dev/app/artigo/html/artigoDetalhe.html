@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$artigoDetalheCtrl.data.saveFunction($artigoDetalheCtrl.data.item)"
+	   delete-function = "$artigoDetalheCtrl.data.deleteFunction($artigoDetalheCtrl.data.item)"
+	   item = "$artigoDetalheCtrl.data.item"
+	   cancel-function = "$artigoDetalheCtrl.data.cancelFunction()"
+	   loading = "$artigoDetalheCtrl.data.loading"
+	   title  = "{{$artigoDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <artigo-form></artigo-form>
+</st-detalhe>

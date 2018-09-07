@@ -1,0 +1,47 @@
+﻿<meta charset="UTF-8" />
+<md-card style="padding-top: 15px;">
+        <md-toolbar class="md-table-toolbar md-default">
+	          <div layout="row" class="md-toolbar-tools"  layout-wrap>
+		           <div flex="20"  hide-xs md-hide-xs>
+					   <md-button class="add-button md-raised" ng-click="$buscatransderivacionalListCtrl.data.openDetail()" class="md-raised">Cadastrar</md-button>
+			       </div>
+				   <st-filter  
+				         flex-xs="80" 
+				         flex="60"
+						 query-options = "$buscatransderivacionalListCtrl.data.requestListParams"
+						 get-list = "$buscatransderivacionalListCtrl.data.getList"
+						 filtros="$buscatransderivacionalListCtrl.data.filtros"
+						>
+				   </st-filter>
+	   			<view-chose flex="10" view-type="config.confs.viewType" ></view-chose>
+	          </div>
+         </md-toolbar>
+</md-card>
+
+	<float-button-add class="float-add-button" tooltip-label="Cadastrar novo buscatransderivacional" ng-click="$buscatransderivacionalListCtrl.data.openDetail()" ></float-button-add>
+	<div layout="row" style="margin:8px">
+	    <md-progress-linear
+	          flex
+	          ng-if="$buscatransderivacionalListCtrl.data.loading===true"
+	          md-mode="indeterminate">
+	    </md-progress-linear>
+	</div>
+	
+	<st-selected-items-actions 
+	   delete-function="$buscatransderivacionalListCtrl.data.deleteFunction($buscatransderivacionalListCtrl.data.getSelectedItemsIds())" 
+	   selected-items="$buscatransderivacionalListCtrl.data.selectedItems">
+	</st-selected-items-actions>
+	 
+ 	<buscatransderivacional-grid-view ng-show="config.confs.viewType=='grid'" ></buscatransderivacional-grid-view>
+ 	<buscatransderivacional-table-view  ng-show="config.confs.viewType=='table'" ></buscatransderivacional-table-view>
+	
+	<div ng-if="$buscatransderivacionalListCtrl.data.objetos.length==0">
+	    <p class="text-muted">Nenhum item encontrado</p>
+    </div>
+   
+    <st-filter-pagination
+	     total-itens="$buscatransderivacionalListCtrl.data.totalItens" 
+	     itens-in-page="$buscatransderivacionalListCtrl.data.objetos.length" 
+	     get-list="$buscatransderivacionalListCtrl.data.getList" 
+	     query-options="$buscatransderivacionalListCtrl.data.requestListParams"  >
+    </st-filter-pagination>

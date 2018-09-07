@@ -1,0 +1,13 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="50" flex-xs="100"  label="Título" ng-model="$buscatransderivacionalDetalheCtrl.data.item.titulo" ></st-input-string>
+    <md-input-container flex="100">
+			<label>Resposta(s)</label>
+			<st-string-chip placeholder="Inserir resposta" ng-model="$buscatransderivacionalDetalheCtrl.data.item.respostas"></st-string-chip>
+	</md-input-container>
+	<div flex="100">
+		 <md-checkbox ng-change="$buscatransderivacionalDetalheCtrl.data.saveFunction($buscatransderivacionalDetalheCtrl.data.item)" ng-model="$buscatransderivacionalDetalheCtrl.data.item.resolvido" ng-true-value="1" ng-false-value="0">
+		    Resolvido
+		 </md-checkbox>
+	</div>
+</div>

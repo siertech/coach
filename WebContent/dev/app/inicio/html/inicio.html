@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+
+
+<div  layout="row" layout-wrap>
+    <div  flex-gt-md="50" hide show-gt-md>
+         <div layout="column">
+              <diarioemocional-list flex></diarioemocional-list>
+              <metascumpridas-list flex></metascumpridas-list.>
+         </div>
+    </div>
+    
+    <div flex flex-gt-md="50">
+         <div layout="column">
+	          <md-card>
+	                <md-card-content>
+	                   <div layout="row" layout-align="center center">
+			              <h2><ng-md-icon md-colors="{color: 'green'}"  icon="playlist_add_check"></ng-md-icon> Metas fixadas</h2>
+			           </div>
+			           <meta-list hide-button-add="true" hide-filter="true" hide-pagination="true" fix-properties = "{exibirNaPaginaInicial: 1}"></meta-list>
+	                </md-card-content>
+	        </md-card>
+          <rodadavida-list></rodadavida-list>
+         </div>
+    </div>
+ </div>
+
+
+ 
+ 
+
+
+

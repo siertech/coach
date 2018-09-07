@@ -1,0 +1,27 @@
+﻿<meta charset="UTF-8" />
+<div  layout="row">
+    <md-card flex>
+      <md-card-content>
+           <div layout="row" layout-align="center center">
+              <h2><ng-md-icon md-colors="{color: 'green'}"  icon="account_circle"></ng-md-icon> Roda da vida</h2>
+           </div>
+           <div layout="row">
+              <canvas chart-colors="$rodadavidaListCtrl.chart.colors" flex id="polar-area" class="chart chart-polar-area"
+					  chart-data="$rodadavidaListCtrl.chart.data" chart-labels="$rodadavidaListCtrl.chart.labels"  chart-options="$rodadavidaListCtrl.chart.options">
+			   </canvas>
+			   <md-divider></md-divider>
+			</div>
+		   <div flex>
+			      <md-list>
+			         <md-list-item><ng-md-icon md-colors="{color: 'blue'}" icon="trending_up"></ng-md-icon><p>{{$rodadavidaListCtrl.rodaDaVida._string.areaAlavancagem}}</p></md-list-item>
+					 <md-list-item><ng-md-icon md-colors="{color: 'orange'}"  icon="warning"></ng-md-icon><p>{{$rodadavidaListCtrl.rodaDaVida._string.areaEmergencia}}</p></md-list-item>
+					 <md-list-item><ng-md-icon md-colors="{color: 'red'}"  icon="favorite"></ng-md-icon> <p>{{$rodadavidaListCtrl.rodaDaVida._string.areaInspiracao}}</p></md-list-item>
+			       </md-list>
+			 </div>
+		    <div layout="row" layout-align="end center">
+				<md-button ng-click="$rodadavidaListCtrl.data.openDetail($rodadavidaListCtrl.rodaDaVida)"" class="md-primary md-raised">Editar</md-button>
+		    </div>
+	  </md-card-content>
+  </md-card>
+</div>
+ 

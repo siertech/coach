@@ -1,0 +1,42 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$proscontrasDetalheCtrl.data.saveFunction($proscontrasDetalheCtrl.data.item)"
+	   delete-function = "$proscontrasDetalheCtrl.data.deleteFunction($proscontrasDetalheCtrl.data.item)"
+	   item = "$proscontrasDetalheCtrl.data.item"
+	   cancel-function = "$proscontrasDetalheCtrl.data.cancelFunction()"
+	   loading = "$proscontrasDetalheCtrl.data.loading"
+	   title  = "{{$proscontrasDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <proscontras-form></proscontras-form>
+	   
+	   <div layout="row" ng-if="$proscontrasDetalheCtrl.data.item.id" layout-align="center start">
+			<md-card flex>
+			    <md-card-title md-colors="{'background-color': 'teal'}"   >
+			    <h3><ng-md-icon icon="thumb_up"></ng-md-icon> Prós ({{ $proscontrasDetalheCtrl.pros.length }})</h3>
+			    <md-divider></md-divider>
+			    </md-card-title> 
+				<md-card-content>
+				 <st-check-list 
+				        objetos="$proscontrasDetalheCtrl.pros" 
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'ProsContrasItem', fixProperties: {tipo: 1, 'proscontras.id': $proscontrasDetalheCtrl.data.item.id }}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+			<md-card flex>
+				<md-card-title  md-colors="{'background-color': 'red'}">
+				    <h3><ng-md-icon  icon="thumb_down"></ng-md-icon> Contras ({{ $proscontrasDetalheCtrl.contras.length }})</h3>
+				    <md-divider></md-divider>
+				</md-card-title>
+				<md-card-content>
+				 <st-check-list 
+				        objetos="$proscontrasDetalheCtrl.contras" 
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'ProsContrasItem', fixProperties: {tipo: 2, 'proscontras.id': $proscontrasDetalheCtrl.data.item.id }}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+		</div>
+	   
+</st-detalhe>

@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="50" flex-xs="100"  label="Nome do ritual" ng-model="$ritualDetalheCtrl.data.item.titulo" ></st-input-string>
+   <p flex="100">Ações</p>
+	   <st-check-list 
+	             flex="100"
+	             ng-if="$ritualDetalheCtrl.data.item.id"
+				 attr-label="titulo" attr="ok" 
+				 crud-options = "{objectName: 'RitualItem', fixProperties: {'ritual.id':$ritualDetalheCtrl.data.item.id }}"
+		></st-check-list>
+	</div>
+

@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row"  layout-wrap flex >
+   <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="item in $papelListCtrl.data.objetos" >
+       <st-grid-item
+          icon="attach_file" 
+          item="item" 
+          label="{{'#'+item.id+' - '+item.descricao}}"
+          delete-function="$papelListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$papelListCtrl.data.openDetail(item)">
+          
+       </st-grid-item>
+	  </div>
+</div>
+ 
+
+   
+      

@@ -1,0 +1,16 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="50" flex-xs="100"  label="Título" ng-model="$frequenciasonoraDetalheCtrl.data.item.titulo" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="URL do vídeo no outube" ng-model="$frequenciasonoraDetalheCtrl.data.item.url" ></st-input-string>
+   <md-input-container flex="50">
+	  <label>Tipo de frequência</label>
+	  <md-select ng-model="$frequenciasonoraDetalheCtrl.data.item.tipo">
+	    <md-option ng-value="'amor'" >Amor</md-option>
+	    <md-option ng-value="'prosperidade'" >Prosperidade</md-option>
+	  </md-select>
+    </md-input-container>
+    <md-input-container flex="100">
+	  <label>Efeitos</label>
+	  <st-string-chip ng-model="$frequenciasonoraDetalheCtrl.data.item.efeitos" placeholder="Inserir efeito"></st-string-chip>
+	 </md-input-container>
+</div>

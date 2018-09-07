@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$buscatransderivacionalDetalheCtrl.data.saveFunction($buscatransderivacionalDetalheCtrl.data.item)"
+	   delete-function = "$buscatransderivacionalDetalheCtrl.data.deleteFunction($buscatransderivacionalDetalheCtrl.data.item)"
+	   item = "$buscatransderivacionalDetalheCtrl.data.item"
+	   cancel-function = "$buscatransderivacionalDetalheCtrl.data.cancelFunction()"
+	   loading = "$buscatransderivacionalDetalheCtrl.data.loading"
+	   title  = "{{$buscatransderivacionalDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <buscatransderivacional-form></buscatransderivacional-form>
+</st-detalhe>

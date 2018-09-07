@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+  <input-string icon="list" flex="70" label="Título" ng-model="$metaDetalheCtrl.data.item._string.titulo" ></input-string>
+  <input-date   icon="calendar" flex="100" label="Onde?" ng-model="$metaDetalheCtrl.data.item._string.onde" ></input-date>
+  <input-date   icon="calendar" flex="100" label="Quando?" ng-model="$metaDetalheCtrl.data.item._string.quando" ></input-date>
+  <input-date   icon="calendar" flex="100" label="Com quem?" ng-model="$metaDetalheCtrl.data.item._string.comQuem" ></input-date>
+   <input-date   icon="calendar" flex="100" label="Como sua vida será afetada?" ng-model="$metaDetalheCtrl.data.item._string.comoAfetaraVida" ></input-date>
+  <md-input-container flex="50">
+	  <md-select ng-model="$metaDetalheCtrl.data.item.prioridade" placeholder="Prioridade">
+	    <md-option ng-value="1">Prioridade baixa</md-option>
+	    <md-option ng-value="2">Prioridade média</md-option>
+	    <md-option ng-value="3">Prioridade alta</md-option>
+	  </md-select>
+   </md-input-container>
+</div>

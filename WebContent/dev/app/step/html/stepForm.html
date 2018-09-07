@@ -1,0 +1,75 @@
+<meta charset="UTF-8" />
+
+<md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Informações">
+	               <md-content class="md-padding">
+	                    <st-input-string  label="Título" ng-model="$stepDetalheCtrl.data.item.titulo" ></st-input-string>
+					     <st-auto-complete 
+					           
+					          
+					 	        label="Step Descriptor"
+					 	        get-complete-object="true"
+					            placeholder="Step Descriptor"       
+					 	        object-name="StepDescriptor"
+					 	        attr="titulo",
+					 	        ng-change="$stepDetalheCtrl.changeStepDescriptor($stepDetalheCtrl.data.item.stepDescriptor)"
+					 	        ng-model="$stepDetalheCtrl.data.item.stepDescriptor" 
+					             initial-busca=""  
+					 		    extra-class="input-lg"  
+					 		    label-cad="Cadastrar novo" 
+					 		    place-holder-busca=""  
+					 		    >
+					 		 </st-auto-complete>
+					 		 <st-check-list
+							         objetos = "$stepDetalheCtrl.steps"
+						              ng-if="$stepDetalheCtrl.data.item.id"
+							           attr-label="titulo" attr="ok" 
+									  crud-options = "{objectName: 'StepItem', fixProperties: {'step.id': $stepDetalheCtrl.data.item.id}}">
+					             </st-check-list>
+					             
+	               </md-content>
+             </md-tab>
+             <md-tab label="Steps" ng-if="$stepDetalheCtrl.steps.length>0">
+	               <md-content class="md-padding">
+	                    <md-tabs>
+	                            <md-tab label="[{{$index+1}}] {{step.titulo}}" ng-repeat="step in $stepDetalheCtrl.steps | orderBy: 'orderIndex'">
+		                                <md-content class="md-padding" layout="row">
+					                                   
+									                   <div  flex="50"  simditor  ng-model="step.content"></div>
+									                      <div  flex="50"
+									                                  
+												                       style="max-height: 500px;padding-left: 9px;overflow-y:scroll"
+																       html-compile 
+																       html="step.descricao">
+																 </div>
+									                    </md-card-content>
+									                 
+		                                </md-content>
+	                             </md-tab>
+	                     </md-tabs>
+	                </md-content>
+             </md-tab>
+             
+             <md-tab label="Resumo">
+	               <md-content class="md-padding" layout="row" layout-wrap>
+	                     
+	                     <div layout="column" flex layout-fill ng-cloak>
+			                     <md-content style="max-height:700px;" md-theme="altTheme">
+											<section ng-repeat="step in $stepDetalheCtrl.steps| orderBy: 'orderIndex'" layout="column">
+											        <md-subheader class="md-primary">{{$index+1}} - {{step.titulo}}</md-subheader>
+											        <div 
+											               class="md-padding"
+													       html-compile 
+													       html="step.content">
+													 </div>
+											        
+											         <md-divider></md-divider> 
+											</section>
+											   
+								</md-content>
+						</div>
+	               </md-content>
+            </md-tab>
+       </md-tabs>
+      
+

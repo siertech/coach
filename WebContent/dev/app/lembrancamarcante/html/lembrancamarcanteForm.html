@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="100" label="Título" ng-model="$lembrancamarcanteDetalheCtrl.data.item.titulo"></st-input-string>
+   <md-input-container flex="50">
+	  <label>Categoria</label>
+	  <md-select ng-model="$lembrancamarcanteDetalheCtrl.data.item.categoria">
+	    <md-option ng-value="'positiva'" >Positiva</md-option>
+	    <md-option ng-value="'negativa'" >Negativa</md-option>
+	  </md-select>
+    </md-input-container>
+   <md-input-container flex="100" class="md-block">
+          <label>Descrição</label>
+          <textarea ng-model="$lembrancamarcanteDetalheCtrl.data.item.descricao"  rows="30" md-select-on-focus></textarea>
+    </md-input-container>
+</div>

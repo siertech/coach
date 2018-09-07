@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$habitosubmitDetalheCtrl.data.saveFunction($habitosubmitDetalheCtrl.data.item)"
+	   delete-function = "$habitosubmitDetalheCtrl.data.deleteFunction($habitosubmitDetalheCtrl.data.item)"
+	   item = "$habitosubmitDetalheCtrl.data.item"
+	   cancel-function = "$habitosubmitDetalheCtrl.data.cancelFunction()"
+	   loading = "$habitosubmitDetalheCtrl.data.loading"
+	   title  = "{{$habitosubmitDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <habitosubmit-form></habitosubmit-form>
+</st-detalhe>

@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$stepDetalheCtrl.data.saveFunction($stepDetalheCtrl.data.item)"
+	   delete-function = "$stepDetalheCtrl.data.deleteFunction($stepDetalheCtrl.data.item)"
+	   item = "$stepDetalheCtrl.data.item"
+	   cancel-function = "$stepDetalheCtrl.data.cancelFunction()"
+	   loading = "$stepDetalheCtrl.data.loading"
+	   title  = "{{$stepDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <step-form></step-form>
+</st-detalhe>

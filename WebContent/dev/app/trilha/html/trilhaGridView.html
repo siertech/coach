@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row"  layout-wrap flex >
+   <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="item in $trilhaListCtrl.data.objetos" >
+       <st-grid-item
+          icon="person" 
+          item="item" 
+          label="{{item._string.nome}}"
+          delete-function="$trilhaListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$trilhaListCtrl.data.openDetail(item)">
+          
+       </st-grid-item>
+	  </div>
+</div>
+ 
+
+   
+      

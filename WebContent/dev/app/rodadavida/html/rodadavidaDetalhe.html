@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$rodadavidaDetalheCtrl.data.saveFunction($rodadavidaDetalheCtrl.data.item)"
+	   delete-function = "$rodadavidaDetalheCtrl.data.deleteFunction($rodadavidaDetalheCtrl.data.item)"
+	   item = "$rodadavidaDetalheCtrl.data.item"
+	   cancel-function = "$rodadavidaDetalheCtrl.data.cancelFunction()"
+	   loading = "$rodadavidaDetalheCtrl.data.loading"
+	   title  = "{{$rodadavidaDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <div layout="row">
+	      <p>Em uma escala de 1 a 10, como está sua vida nas seguintes áreas?</p>
+	   </div>
+	   <rodadavida-form></rodadavida-form>
+</st-detalhe>

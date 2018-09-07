@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Informações relacionadas  -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel='canonical' href=''>
+<link rel='manifest' href='manifest.json'>
+<meta name='mobile-web-app-capable' content='yes'>
+<meta name="apple-mobile-web-app-status-bar-style"	content="black-translucent">
+<meta name="mobile-web-app-status-bar-style" content="black-translucent">
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='application-name' content=''>
+<meta name='apple-mobile-web-app-status-bar-style' content='black'>
+<meta name='apple-mobile-web-app-title' content=''>
+<link rel='icon sizes=192x192' href='icone.png'>
+<link rel='apple-touch-icon' href='icone.png'>
+<meta name='msapplication-TileImage' content='icone.png'>
+<meta name='msapplication-TileColor' content='#3f51b5'>
+<meta name='theme-color' content='#3f51b5'>
+<meta property='og:title' content=''>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='icone.png'>
+<meta property='og:url' content=''>
+<meta property='og:description' content=''>
+<meta name='twitter:card' content='summary'>
+<meta name='twitter:url' content=''>
+<meta name='twitter:title' content=''>
+<meta name='twitter:description' content=''>
+<meta name='twitter:image' content='icone.png'>
+<meta name='twitter:creator' content='@paul_kinlan'>
+<!--  -->
+<title></title>
+
+</head>
+  <span us-spinner spinner-key="spinner-1"></span>
+
+<body>
+   
+     <!-- Notificações exibidas através de stUtil.showMessage() -->
+	 <div growl></div>
+	 
+	
+    <!-- Splash Screen --> 
+	<div style="margin-top: 15%; text-align:center" class="splash" ng-cloak="">
+	    <img width="329px" src="splash.gif"/>
+	     <p id="text-loading">Carregando o sistema...</p>
+	</div>
+	
+   <!-- Corpo da página -->
+	<div ng-cloak="">
+	   <ng-include src="'app/menu/html/menu.html'"></ng-include>
+	  	<div flex layout="row" layout-padding>
+	      <!-- Container #4 -->
+	      <md-content flex id="content" ng-view>
+	         	<test-user-button ng-show="(!testIsOpen || testIsOpen==false)"></test-user-button>  
+	      </md-content>
+		</div>
+	</div>
+</body>
+
+<!-- build:css css/app.css -->
+<link rel="stylesheet" type="text/css"  href="lib/simditor/simditor/styles/simditor.css"/>
+<link rel="stylesheet" href="app/step/css/style.css"/>
+<link rel="stylesheet" href="material-steppers/material-steppers.min.css"/>
+<!-- endbuild -->
+
+<!-- CSS do Saat's Framework-->
+<link rel="stylesheet" href="../bower_components/stapiweb/css/st-api.css"/>
+
+
+<!-- Angularjs Material -->
+<link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css"/>
+
+<script src="../bower_components/jquery/jquery.min.js"></script>
+<script src="../bower_components/moment/moment.js"></script>
+
+<!-- Angularjs -->
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="../bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="../bower_components/angular-material/angular-material.min.js"></script>
+
+<!-- Outras dependências -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="../bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+<script src="material-steppers/material-steppers.min.js"></script>
+
+
+
+<!-- Biblioteca base da api-->
+<script src="../bower_components/stapiweb/js/st-api-lib-base.js"></script>
+
+<!-- Angularjs Material -->
+<script src="../bower_components/angular-material/angular-material.min.js"></script>
+
+<!--Arquivo principal da Api -->
+<script src="../bower_components/stapiweb/js/st-api.js"></script>
+
+<!-- Templates da API -->
+<script src="../bower_components/stapiweb/js/st-api-templates.js"></script>
+
+<!-- Templates da aplicação -->
+<script src="js/app-templates.js"></script>
+
+<!-- JS da aplicação -->
+<!-- build:js js/app.js -->
+
+<!-- Arquivos de configuração da aplicação -->
+<script src="app-config.js"></script>
+<script src='lib/simditor/simple-module/lib/module.js'></script>
+<script src='lib/simditor/simple-hotkeys/lib/hotkeys.js'></script>
+<script src='lib/simditor/simditor/lib/simditor.js'></script>
+<script src='lib/simditor/ng-simditor/dist/js/ng-simditor.js'></script>
+<script src='lib/simditor/simditor-i18n.js'></script>
+
+<!-- TarefaSprint -->
+ <script src='app/tarefasprint/js/tarefasprintController.js'></script>
+<script src='app/tarefasprint/js/tarefasprintDirective.js'></script>
+<script src='app/tarefasprint/js/tarefasprintFactory.js'></script>
+<script src='app/tarefasprint/js/tarefasprintRoute.js'></script>
+
+
+<!-- Sprint -->
+ <script src='app/sprint/js/sprintController.js'></script>
+<script src='app/sprint/js/sprintDirective.js'></script>
+<script src='app/sprint/js/sprintFactory.js'></script>
+<script src='app/sprint/js/sprintRoute.js'></script>
+
+
+<!-- ProsContras -->
+ <script src='app/proscontras/js/proscontrasController.js'></script>
+<script src='app/proscontras/js/proscontrasDirective.js'></script>
+<script src='app/proscontras/js/proscontrasFactory.js'></script>
+<script src='app/proscontras/js/proscontrasRoute.js'></script>
+
+
+<!-- Artigo -->
+ <script src='app/artigo/js/artigoController.js'></script>
+<script src='app/artigo/js/artigoDirective.js'></script>
+<script src='app/artigo/js/artigoFactory.js'></script>
+<script src='app/artigo/js/artigoRoute.js'></script>
+
+
+<!-- ListItem -->
+ <script src='app/listitem/js/listitemController.js'></script>
+<script src='app/listitem/js/listitemDirective.js'></script>
+<script src='app/listitem/js/listitemFactory.js'></script>
+<script src='app/listitem/js/listitemRoute.js'></script>
+
+
+<!-- List -->
+ <script src='app/list/js/listController.js'></script>
+<script src='app/list/js/listDirective.js'></script>
+<script src='app/list/js/listFactory.js'></script>
+<script src='app/list/js/listRoute.js'></script>
+
+
+<!-- StepItem -->
+ <script src='app/stepitem/js/stepitemController.js'></script>
+<script src='app/stepitem/js/stepitemDirective.js'></script>
+<script src='app/stepitem/js/stepitemFactory.js'></script>
+<script src='app/stepitem/js/stepitemRoute.js'></script>
+
+
+<!-- Step -->
+ <script src='app/step/js/stepController.js'></script>
+<script src='app/step/js/stepDirective.js'></script>
+<script src='app/step/js/stepFactory.js'></script>
+<script src='app/step/js/stepRoute.js'></script>
+
+
+<!-- StepDescriptor -->
+ <script src='app/stepdescriptor/js/stepdescriptorController.js'></script>
+<script src='app/stepdescriptor/js/stepdescriptorDirective.js'></script>
+<script src='app/stepdescriptor/js/stepdescriptorFactory.js'></script>
+<script src='app/stepdescriptor/js/stepdescriptorRoute.js'></script>
+
+
+<!-- Comportamento -->
+ <script src='app/comportamento/js/comportamentoController.js'></script>
+<script src='app/comportamento/js/comportamentoDirective.js'></script>
+<script src='app/comportamento/js/comportamentoFactory.js'></script>
+<script src='app/comportamento/js/comportamentoRoute.js'></script>
+
+
+<!-- MetasCumpridas -->
+ <script src='app/metascumpridas/js/metascumpridasController.js'></script>
+<script src='app/metascumpridas/js/metascumpridasDirective.js'></script>
+<script src='app/metascumpridas/js/metascumpridasFactory.js'></script>
+<script src='app/metascumpridas/js/metascumpridasRoute.js'></script>
+
+
+<!-- BuscaTransderivacional -->
+ <script src='app/buscatransderivacional/js/buscatransderivacionalController.js'></script>
+<script src='app/buscatransderivacional/js/buscatransderivacionalDirective.js'></script>
+<script src='app/buscatransderivacional/js/buscatransderivacionalFactory.js'></script>
+<script src='app/buscatransderivacional/js/buscatransderivacionalRoute.js'></script>
+
+
+<!-- DiarioSonho -->
+ <script src='app/diariosonho/js/diariosonhoController.js'></script>
+<script src='app/diariosonho/js/diariosonhoDirective.js'></script>
+<script src='app/diariosonho/js/diariosonhoFactory.js'></script>
+<script src='app/diariosonho/js/diariosonhoRoute.js'></script>
+
+
+<!-- Exercicio -->
+ <script src='app/exercicio/js/exercicioController.js'></script>
+<script src='app/exercicio/js/exercicioDirective.js'></script>
+<script src='app/exercicio/js/exercicioFactory.js'></script>
+<script src='app/exercicio/js/exercicioRoute.js'></script>
+
+<!-- BurnDown -->
+ <script src='app/burndown/js/burndownController.js'></script>
+<script src='app/burndown/js/burndownDirective.js'></script>
+<script src='app/burndown/js/burndownFactory.js'></script>
+<script src='app/burndown/js/burndownRoute.js'></script>
+
+<!-- RitualItem -->
+ <script src='app/ritualitem/js/ritualitemController.js'></script>
+<script src='app/ritualitem/js/ritualitemDirective.js'></script>
+<script src='app/ritualitem/js/ritualitemFactory.js'></script>
+<script src='app/ritualitem/js/ritualitemRoute.js'></script>
+
+<!-- Ritual -->
+ <script src='app/ritual/js/ritualController.js'></script>
+<script src='app/ritual/js/ritualDirective.js'></script>
+<script src='app/ritual/js/ritualFactory.js'></script>
+<script src='app/ritual/js/ritualRoute.js'></script>
+
+<!-- TodayTask -->
+ <script src='app/todaytask/js/todaytaskController.js'></script>
+<script src='app/todaytask/js/todaytaskDirective.js'></script>
+<script src='app/todaytask/js/todaytaskFactory.js'></script>
+<script src='app/todaytask/js/todaytaskRoute.js'></script>
+
+<!-- FrequenciaSonora -->
+ <script src='app/frequenciasonora/js/frequenciasonoraController.js'></script>
+<script src='app/frequenciasonora/js/frequenciasonoraDirective.js'></script>
+<script src='app/frequenciasonora/js/frequenciasonoraFactory.js'></script>
+<script src='app/frequenciasonora/js/frequenciasonoraRoute.js'></script>
+
+<!-- Fobia -->
+ <script src='app/fobia/js/fobiaController.js'></script>
+<script src='app/fobia/js/fobiaDirective.js'></script>
+<script src='app/fobia/js/fobiaFactory.js'></script>
+<script src='app/fobia/js/fobiaRoute.js'></script>
+
+<!-- RodaDaVida -->
+ <script src='app/rodadavida/js/rodadavidaController.js'></script>
+<script src='app/rodadavida/js/rodadavidaDirective.js'></script>
+<script src='app/rodadavida/js/rodadavidaFactory.js'></script>
+<script src='app/rodadavida/js/rodadavidaRoute.js'></script>
+
+<!-- DiarioEmocional -->
+ <script src='app/diarioemocional/js/diarioemocionalController.js'></script>
+<script src='app/diarioemocional/js/diarioemocionalDirective.js'></script>
+<script src='app/diarioemocional/js/diarioemocionalFactory.js'></script>
+<script src='app/diarioemocional/js/diarioemocionalRoute.js'></script>
+
+
+<!-- LembrancaMarcante -->
+ <script src='app/lembrancamarcante/js/lembrancamarcanteController.js'></script>
+<script src='app/lembrancamarcante/js/lembrancamarcanteDirective.js'></script>
+<script src='app/lembrancamarcante/js/lembrancamarcanteFactory.js'></script>
+<script src='app/lembrancamarcante/js/lembrancamarcanteRoute.js'></script>
+
+
+<!-- Anotacao -->
+ <script src='app/anotacao/js/anotacaoController.js'></script>
+<script src='app/anotacao/js/anotacaoDirective.js'></script>
+<script src='app/anotacao/js/anotacaoFactory.js'></script>
+<script src='app/anotacao/js/anotacaoRoute.js'></script>
+
+
+<!-- Relatorio -->
+ <script src='app/relatorio/js/relatorioController.js'></script>
+<script src='app/relatorio/js/relatorioDirective.js'></script>
+<script src='app/relatorio/js/relatorioFactory.js'></script>
+<script src='app/relatorio/js/relatorioRoute.js'></script>
+
+
+<!-- MetricaSubmit -->
+ <script src='app/metricasubmit/js/metricasubmitController.js'></script>
+<script src='app/metricasubmit/js/metricasubmitDirective.js'></script>
+<script src='app/metricasubmit/js/metricasubmitFactory.js'></script>
+<script src='app/metricasubmit/js/metricasubmitRoute.js'></script>
+
+
+<!-- Metrica -->
+ <script src='app/metrica/js/metricaController.js'></script>
+<script src='app/metrica/js/metricaDirective.js'></script>
+<script src='app/metrica/js/metricaFactory.js'></script>
+<script src='app/metrica/js/metricaRoute.js'></script>
+
+
+<!-- HabitoSubmit -->
+ <script src='app/habitosubmit/js/habitosubmitController.js'></script>
+<script src='app/habitosubmit/js/habitosubmitDirective.js'></script>
+<script src='app/habitosubmit/js/habitosubmitFactory.js'></script>
+<script src='app/habitosubmit/js/habitosubmitRoute.js'></script>
+
+
+
+
+<!-- EntidadeTeste -->
+ <script src='app/entidadeteste/js/entidadetesteController.js'></script>
+<script src='app/entidadeteste/js/entidadetesteDirective.js'></script>
+<script src='app/entidadeteste/js/entidadetesteFactory.js'></script>
+<script src='app/entidadeteste/js/entidadetesteRoute.js'></script>
+
+<!-- Habito -->
+ <script src='app/habito/js/habitoController.js'></script>
+<script src='app/habito/js/habitoDirective.js'></script>
+<script src='app/habito/js/habitoFactory.js'></script>
+<script src='app/habito/js/habitoRoute.js'></script>
+
+
+<!-- AvaliacaoPapel -->
+ <script src='app/avaliacaopapel/js/avaliacaopapelController.js'></script>
+<script src='app/avaliacaopapel/js/avaliacaopapelDirective.js'></script>
+<script src='app/avaliacaopapel/js/avaliacaopapelFactory.js'></script>
+<script src='app/avaliacaopapel/js/avaliacaopapelRoute.js'></script>
+
+<!-- Evidencia -->
+ <script src='app/evidencia/js/evidenciaController.js'></script>
+<script src='app/evidencia/js/evidenciaDirective.js'></script>
+<script src='app/evidencia/js/evidenciaFactory.js'></script>
+<script src='app/evidencia/js/evidenciaRoute.js'></script>
+
+<!-- Valor -->
+ <script src='app/valor/js/valorController.js'></script>
+<script src='app/valor/js/valorDirective.js'></script>
+<script src='app/valor/js/valorFactory.js'></script>
+<script src='app/valor/js/valorRoute.js'></script>
+
+<!-- Trilha -->
+ <script src='app/trilha/js/trilhaController.js'></script>
+<script src='app/trilha/js/trilhaDirective.js'></script>
+<script src='app/trilha/js/trilhaFactory.js'></script>
+<script src='app/trilha/js/trilhaRoute.js'></script>
+
+<!-- Papel -->
+ <script src='app/papel/js/papelController.js'></script>
+<script src='app/papel/js/papelDirective.js'></script>
+<script src='app/papel/js/papelFactory.js'></script>
+<script src='app/papel/js/papelRoute.js'></script>
+
+<!-- Missao -->
+ <script src='app/missao/js/missaoController.js'></script>
+<script src='app/missao/js/missaoDirective.js'></script>
+<script src='app/missao/js/missaoFactory.js'></script>
+<script src='app/missao/js/missaoRoute.js'></script>
+
+<!-- Meta -->
+ <script src='app/meta/js/metaController.js'></script>
+<script src='app/meta/js/metaDirective.js'></script>
+<script src='app/meta/js/metaFactory.js'></script>
+<script src='app/meta/js/metaRoute.js'></script>
+
+<!-- Menu da aplicação -->
+<script src="app/menu/js/menuController.js"></script>
+
+<!-- Login no sistema -->
+<script src="app/login/js/loginConfig.js"></script>
+<script src="app/login/js/loginController.js"></script>
+
+<!-- Página inicial -->
+<script src="app/inicio/js/inicioController.js"></script>
+<script src="app/inicio/js/inicioConfig.js"></script>
+
+<!-- endbuild -->
+
+<!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69422102-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Hotjar Tracking Code for http://www.siertech.com.br -->
+<script>
+
+if(window.location.href.indexOf("localhost")==-1 && window.location.href.indexOf("teste.siertech.com.br")==-1){
+
+    (function(h,o,t,j,a,r){
+    	
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:270407,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    
+    console.log("Hotjar ATIVADO para "+window.location.href+"!!!");
+    
+}else{
+	
+	console.log("Hotjar DESATIVADO para "+window.location.href+"!!!");
+}
+   
+</script>
+
+
+<script>
+
+  var html = document.getElementsByTagName('html')[0];
+  var body = document.getElementsByTagName('body')[0];
+   
+  setTimeout(function() {
+	  try{
+	    html.setAttribute('ng-app', 'adm');
+	    body.setAttribute('style', '');
+	    angular.bootstrap(html, ['ng', 'adm']);
+	  }catch(e){
+		  console.log("Ocorreu um erro ao carregar a página");
+		  window.alert("O Sistema não é compatível com seu navegador!\n"+e);
+		  console.log(e);
+	  }
+  }, 30);
+  
+ //Analise de métrica para tempo de carregamento do sistema 
+ window.inicioCarregamento = new Date().getTime();
+</script>
+
+
+</html>

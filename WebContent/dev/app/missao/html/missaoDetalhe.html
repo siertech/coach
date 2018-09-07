@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$missaoDetalheCtrl.data.saveFunction($missaoDetalheCtrl.data.item)"
+	   delete-function = "$missaoDetalheCtrl.data.deleteFunction($missaoDetalheCtrl.data.item)"
+	   item = "$missaoDetalheCtrl.data.item"
+	   cancel-function = "$missaoDetalheCtrl.data.cancelFunction()"
+	   loading = "$missaoDetalheCtrl.data.loading"
+	   title  = "{{$missaoDetalheCtrl.data.item._string.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <missao-form></missao-form>
+</st-detalhe>

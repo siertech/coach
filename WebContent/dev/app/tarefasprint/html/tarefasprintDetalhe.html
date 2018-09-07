@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$tarefasprintDetalheCtrl.data.saveFunction($tarefasprintDetalheCtrl.data.item)"
+	   delete-function = "$tarefasprintDetalheCtrl.data.deleteFunction($tarefasprintDetalheCtrl.data.item)"
+	   item = "$tarefasprintDetalheCtrl.data.item"
+	   cancel-function = "$tarefasprintDetalheCtrl.data.cancelFunction()"
+	   loading = "$tarefasprintDetalheCtrl.data.loading"
+	   title  = "{{$tarefasprintDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <tarefasprint-form></tarefasprint-form>
+</st-detalhe>

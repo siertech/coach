@@ -1,0 +1,35 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+
+ <md-tabs flex md-dynamic-height md-border-bottom >
+            <md-tab label="Informações">
+	               <md-content class="md-padding" layout="row" layout-wrap>
+	                     <st-input-string flex="100" flex-xs="100"  label="Título" ng-model="$stepdescriptorDetalheCtrl.data.item.titulo" ></st-input-string>
+	               </md-content>
+	        </md-tab>
+	        <md-tab label="Ordenação e cadastro de itens" ng-if="$stepdescriptorDetalheCtrl.data.item.id">
+	        
+	      
+			        <st-check-list
+			         objetos = "$stepdescriptorDetalheCtrl.data.stepItems"
+		              ng-if="$stepdescriptorDetalheCtrl.data.item.id"
+			         attr-label="titulo" attr="_string.ok" 
+					  crud-options = "{objectName: 'StepItem', fixProperties: {'stepDescriptor.id': $stepdescriptorDetalheCtrl.data.item.id}}"
+			   ></st-check-list>
+	        </md-tab>
+	        <md-tab label="Detalhamento de itens" ng-if="$stepdescriptorDetalheCtrl.data.stepItems.length>0">
+	              <md-subheader class="md-no-sticky">Editar detalhes de cada etapa</md-subheader>
+	              <md-tabs md-dynamic-height md-border-bottom >
+                     <md-tab label="{{step.titulo}}" ng-repeat="step in $stepdescriptorDetalheCtrl.data.stepItems">
+	                       <md-content class="md-padding" layout="column">
+	                                  <md-button ng-click="$stepdescriptorDetalheCtrl.data.saveStepItem(step)" class="md-primary md-raised">Salvar</md-button>
+	                                 <st-input-string flex label="Título" ng-model="step.titulo"></st-input-string>
+						             <div simditor  ng-model="step.descricao"></div>
+						    </md-content>
+	                       </md-tab>
+	                </md-tabs>
+	          </md-tab>
+	      
+</md-tabs>
+ 
+</div>

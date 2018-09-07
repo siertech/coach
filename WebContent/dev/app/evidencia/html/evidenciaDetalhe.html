@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$evidenciaDetalheCtrl.data.saveFunction($evidenciaDetalheCtrl.data.item)"
+	   delete-function = "$evidenciaDetalheCtrl.data.deleteFunction($evidenciaDetalheCtrl.data.item)"
+	   item = "$evidenciaDetalheCtrl.data.item"
+	   cancel-function = "$evidenciaDetalheCtrl.data.cancelFunction()"
+	   loading = "$evidenciaDetalheCtrl.data.loading"
+	   title  = "{{$evidenciaDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <evidencia-form></evidencia-form>
+</st-detalhe>

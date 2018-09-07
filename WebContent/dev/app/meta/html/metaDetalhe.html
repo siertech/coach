@@ -1,0 +1,159 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$metaDetalheCtrl.data.saveFunction($metaDetalheCtrl.data.item)"
+	   delete-function = "$metaDetalheCtrl.data.deleteFunction($metaDetalheCtrl.data.item)"
+	   item = "$metaDetalheCtrl.data.item"
+	   cancel-function = "$metaDetalheCtrl.data.cancelFunction()"
+	   loading = "$metaDetalheCtrl.data.loading"
+	   title  = "{{$metaDetalheCtrl.data.item._string.titulo || 'Cadastro de nova meta'}}">
+	 
+ 
+	
+<md-tabs md-dynamic-height md-border-bottom>
+       
+     <md-tab label="Sumário">
+              
+         <md-content  layout="column" layout-padding>
+               
+               
+			  <div flex>
+			          <p><strong>Resta(m): </strong>{{$metaDetalheCtrl.data.item.data|metaCountDown}}</p>
+			          <p><strong>Data de início: </strong>{{$metaDetalheCtrl.data.item.dataCadastro|date: 'dd/MM/yyyy'}}</p>
+			          <p><strong>Data de entrega: </strong>{{$metaDetalheCtrl.data.item.data|date: 'dd/MM/yyyy'}}</p>
+			          <p><strong>Dias corridos: </strong>{{$metaDetalheCtrl.data.item.diasCorridos}}</p>
+			          <p><strong>Qual é o seu objetivo?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.titulo}}</p>
+			           <p><strong>Descrição da meta no presente</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.descricao}}</p>
+			          <p><strong>Papeis assumidos para alcançar a meta</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.papeis}}</p>
+			          <p><strong>Onde e com quem?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.contexto}}</p>
+			          <p><strong>O que eu irei ver e sentir quando alcançar o objetivo</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.evidencias}}</p>
+			          <p><strong>Como irei ver se estou avançando? Métricas, etc..</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.comoVerAvanco}}</p>
+			          <md-divider></md-divider>
+			          <p><strong>O que te impede de alcançar a meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.impedimentos}}</p>
+			          <p><strong>Você já tentou algo para alcançar essa meta no passado? O que?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.jaTentou}}</p>
+			          <p><strong>Quais são suas dificuldades neurológicas para alcançar esta meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.dificuldadesNeurologicas}}</p>
+			          <p><strong>O que você poderá ganhar quando alcançar a meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.podeGanhar}}</p>
+			          <p><strong>O que você pode perder quando alcançar a meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.podePerder}}</p>
+			          <p><strong>Quais recursos você já possui para realização da meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.recursosJaTenho}}</p>
+			          <p><strong>Quais recursos eu preciso para realização da meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.recursosNaoTenho}}</p>
+			          <p><strong>Quem são os meus mentores para alcançar esta meta?</strong></p>
+			          <p>{{$metaDetalheCtrl.data.item.mentores}}</p>
+			         
+			  </div>
+		</md-content>
+     </md-tab>
+
+      <md-tab label="Descrição da sua meta">
+	        <md-content class="md-padding">
+	            <div flex="100" flex-xs="100" >
+			      <md-checkbox  ng-change="$metaDetalheCtrl.data.changeAlcancada($metaDetalheCtrl.data.item)" ng-true-value="1" ng-false-value="0" ng-model="$metaDetalheCtrl.data.item.alcancada">Alcançada</md-checkbox>
+			   </div>
+	           <div flex="100" flex-xs="100" >
+			      <md-checkbox  ng-true-value="1" ng-false-value="0" ng-model="$metaDetalheCtrl.data.item.exibirNaPaginaInicial">Exibir na página inicial</md-checkbox>
+			   </div>
+	          <st-input-string label="O que você quer ser, ter ou fazer? qual é o seu objetivo?" ng-model="$metaDetalheCtrl.data.item.titulo"></st-input-string>
+	          <md-input-container flex="100" class="md-block">
+		          <label>Descreva a meta no presente</label>
+		          <textarea ng-model="$metaDetalheCtrl.data.item.descricao"  md-select-on-focus></textarea>
+		      </md-input-container>
+		      
+	          <p>Dicas</p>
+	          <p>Seu objetivo deve ser específico (Ex: emagrecer 5kg)</p>
+	          <p>Deve estar foamulado positivamente</p>
+	          
+	         <md-content class="md-padding">
+	          <p>Quais são os papéis que você deve assumir para alcançar a meta?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.papeis"></st-string-chip>
+	         </md-content>
+	          
+	        </md-content>
+       </md-tab>
+       <md-tab label="Data">
+	        <md-content class="md-padding">
+	          <st-input-date label="Data para realização da meta" ng-model="$metaDetalheCtrl.data.item.data"></st-input-date>
+	        </md-content>
+       </md-tab>
+       
+       <md-tab label="Contexto">
+	        <md-content class="md-padding">
+	          <p>Onde e com quem?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.contexto"></st-string-chip>
+	         </md-content>
+       </md-tab>
+       
+       <md-tab label="Evidência">
+	        <md-content class="md-padding" >
+	           <md-input-container layout="row">
+			          <label>O que eu irei ver e sentir quando alcançar o objetivo?</label>
+			          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.evidencias"></st-string-chip>
+	          </md-input-container>
+	           <md-input-container layout="row">
+		          <label>Como verei se estou avançando? indo na direção Certa?</label>
+		          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.comoVerAvanco"></st-string-chip>
+		       </md-input-container>
+	           <md-input-container layout="row">
+				  <label>Ancoras</label>
+				  <st-string-chip ng-model="$metaDetalheCtrl.data.item.ancoras" placeholder="Inserir ancora"></st-string-chip>
+			   </md-input-container>
+			     
+	        </md-content>
+       </md-tab>
+       <md-tab label="Impedimentos">
+	        <md-content class="md-padding">
+	          <p>O que te impede de realizar esta meta?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.impedimentos"></st-string-chip>
+	          <p>O que você já tentou para alcançar essa meta no passado?</p>
+	           <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.jaTentou"></st-string-chip>
+	          <p>Quais são suas dificuldades neurológicas?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.dificuldadesNeurologicas"></st-string-chip>
+	        </md-content>
+       </md-tab>
+       
+       <md-tab label="Análise sistemica">
+	        <md-content class="md-padding">
+	          <p>O que você poderá ganhar quando alcançar a meta?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.podeGanhar"></st-string-chip>
+	          <p>O que você pode perder quando alcançar a meta?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.podePerder"></st-string-chip>
+	        </md-content>
+       </md-tab>
+       
+       <md-tab label="Recursos">
+	        <md-content class="md-padding">
+	          <p>Quais recursos você já possui para realização da meta?</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.recursosJaTenho"></st-string-chip>
+	          <p>Quais recursos eu preciso para realização da meta</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.recursosNaoTenho"></st-string-chip>
+	          <p>Mentores</p>
+	          <st-string-chip placeholder="Inserir item..." ng-model="$metaDetalheCtrl.data.item.mentores"></st-string-chip>
+	        </md-content>
+       </md-tab>
+   
+       <md-tab label="Hábito" >
+	        <md-content class="md-padding">
+	          <p>Quais hábitos devo adotar para realização da meta?</p>
+	          <st-check-list 
+			    attr-label="titulo" attr="_string.ok" 
+			    crud-options = "{objectName: 'Habito', fixProperties: {'meta.id':$metaDetalheCtrl.data.item.id }}"
+			    ></st-check-list>
+	        </md-content>
+       </md-tab>
+        <md-tab label="Sprint" ng-if="$metaDetalheCtrl.data.item.id">
+              <sprint-list  fix-properties="{'meta.id':$metaDetalheCtrl.data.item.id}"></sprint-list>
+        </md-tab>
+  </md-tabs>
+  	   
+</st-detalhe>

@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$comportamentoDetalheCtrl.data.saveFunction($comportamentoDetalheCtrl.data.item)"
+	   delete-function = "$comportamentoDetalheCtrl.data.deleteFunction($comportamentoDetalheCtrl.data.item)"
+	   item = "$comportamentoDetalheCtrl.data.item"
+	   cancel-function = "$comportamentoDetalheCtrl.data.cancelFunction()"
+	   loading = "$comportamentoDetalheCtrl.data.loading"
+	   title  = "{{$comportamentoDetalheCtrl.data.item.descricao || 'Cadastro de novo Item'}}">
+	   
+	   <comportamento-form></comportamento-form>
+</st-detalhe>

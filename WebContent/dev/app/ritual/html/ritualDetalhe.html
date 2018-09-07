@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$ritualDetalheCtrl.data.saveFunction($ritualDetalheCtrl.data.item)"
+	   delete-function = "$ritualDetalheCtrl.data.deleteFunction($ritualDetalheCtrl.data.item)"
+	   item = "$ritualDetalheCtrl.data.item"
+	   cancel-function = "$ritualDetalheCtrl.data.cancelFunction()"
+	   loading = "$ritualDetalheCtrl.data.loading"
+	   title  = "{{$ritualDetalheCtrl.data.item.titulo|| 'Cadastro de novo Item'}}">
+	   
+	   <ritual-form></ritual-form>
+</st-detalhe>

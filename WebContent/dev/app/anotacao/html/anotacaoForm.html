@@ -1,0 +1,9 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <st-input-string flex="70" label="Título" ng-model="$anotacaoDetalheCtrl.data.item.titulo"></st-input-string>
+   <st-input-string flex="30" label="Categoria" ng-model="$anotacaoDetalheCtrl.data.item.categoria"></st-input-string>
+   <md-input-container flex="100" class="md-block">
+          <label>Conteúdo</label>
+          <textarea ng-model="$anotacaoDetalheCtrl.data.item.descricao"  rows="30" md-select-on-focus></textarea>
+        </md-input-container>
+</div>

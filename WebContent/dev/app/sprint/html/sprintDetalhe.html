@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$sprintDetalheCtrl.data.saveFunction($sprintDetalheCtrl.data.item)"
+	   delete-function = "$sprintDetalheCtrl.data.deleteFunction($sprintDetalheCtrl.data.item)"
+	   item = "$sprintDetalheCtrl.data.item"
+	   cancel-function = "$sprintDetalheCtrl.data.cancelFunction()"
+	   loading = "$sprintDetalheCtrl.data.loading"
+	   title  = "{{$sprintDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <sprint-form></sprint-form>
+</st-detalhe>

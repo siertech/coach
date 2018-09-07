@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row"  layout-wrap flex >
+   <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="item in $burndownListCtrl.data.objetos" >
+       <st-grid-item
+          icon="person" 
+          item="item" 
+          label="{{item._string.nome}}"
+          delete-function="$burndownListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$burndownListCtrl.data.openDetail(item)">
+          
+       </st-grid-item>
+	  </div>
+</div>
+ 
+
+   
+      

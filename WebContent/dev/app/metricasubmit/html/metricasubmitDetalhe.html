@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$metricasubmitDetalheCtrl.data.saveFunction($metricasubmitDetalheCtrl.data.item)"
+	   delete-function = "$metricasubmitDetalheCtrl.data.deleteFunction($metricasubmitDetalheCtrl.data.item)"
+	   item = "$metricasubmitDetalheCtrl.data.item"
+	   cancel-function = "$metricasubmitDetalheCtrl.data.cancelFunction()"
+	   loading = "$metricasubmitDetalheCtrl.data.loading"
+	   title  = "{{$metricasubmitDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <metricasubmit-form></metricasubmit-form>
+</st-detalhe>

@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$diariosonhoDetalheCtrl.data.saveFunction($diariosonhoDetalheCtrl.data.item)"
+	   delete-function = "$diariosonhoDetalheCtrl.data.deleteFunction($diariosonhoDetalheCtrl.data.item)"
+	   item = "$diariosonhoDetalheCtrl.data.item"
+	   cancel-function = "$diariosonhoDetalheCtrl.data.cancelFunction()"
+	   loading = "$diariosonhoDetalheCtrl.data.loading"
+	   title  = "{{$diariosonhoDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <diariosonho-form></diariosonho-form>
+</st-detalhe>

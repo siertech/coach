@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$valorDetalheCtrl.data.saveFunction($valorDetalheCtrl.data.item)"
+	   delete-function = "$valorDetalheCtrl.data.deleteFunction($valorDetalheCtrl.data.item)"
+	   item = "$valorDetalheCtrl.data.item"
+	   cancel-function = "$valorDetalheCtrl.data.cancelFunction()"
+	   loading = "$valorDetalheCtrl.data.loading"
+	   title  = "{{$valorDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <valor-form></valor-form>
+</st-detalhe>

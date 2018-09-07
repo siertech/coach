@@ -1,0 +1,63 @@
+﻿<meta charset="UTF-8" />
+<div layout="row" layout-wrap layout-align="center start">
+     <div flex="45">
+		<div layout="column">
+			<md-card flex>
+			    <md-card-title md-colors="{'background-color': 'red'}">
+			    <h3 flex><ng-md-icon  icon="format_list_numbered"></ng-md-icon> Importante e Urgente</h3>
+			    </md-card-title> 
+				<md-card-content>
+				<md-divider></md-divider>
+				 <st-check-list flex
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'TodayTask', fixProperties: {categoria: 0}}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+			<md-card flex>
+				<md-card-title md-colors="{'background-color': 'teal'}">
+				    <h3 flex><ng-md-icon icon="format_list_numbered"></ng-md-icon> Não importante e Urgente</h3>
+				</md-card-title>
+				<md-card-content>
+			    <md-divider></md-divider>
+				 <st-check-list flex
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'TodayTask', fixProperties: {categoria: 2}}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+		</div>
+	</div>
+	
+	 <div flex="45">
+	<div layout="column">
+	
+	           <md-card flex>
+			    <md-card-title md-colors="{'background-color': 'amber'}">
+			    	<h3 flex><ng-md-icon  icon="format_list_numbered"></ng-md-icon> Importante e NÃO Urgente</h3>
+			      </md-card-title>
+				<md-card-content>
+				<md-divider></md-divider>
+				 <st-check-list flex
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'TodayTask', fixProperties: {categoria: 1}}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+			  
+			
+			<md-card flex>
+			    <md-card-title md-colors="{'background-color': 'green'}">
+				    <h3 flex><ng-md-icon icon="format_list_numbered"></ng-md-icon> Não importante e Não Urgente</h3>
+				</md-card-title>
+				<md-card-content>
+				<md-divider></md-divider>
+				 <st-check-list flex
+						attr-label="titulo" attr="ok" 
+						crud-options = "{objectName: 'TodayTask', fixProperties: {categoria: 3}}"
+				></st-check-list>
+				</md-card-content>
+			</md-card>
+		</div>
+		</div>
+</div>

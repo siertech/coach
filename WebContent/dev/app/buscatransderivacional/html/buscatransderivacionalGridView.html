@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row"  layout-wrap flex >
+   <div flex="25" flex-xs="100" flex-sm="50" ng-repeat="item in $buscatransderivacionalListCtrl.data.objetos" >
+       <st-grid-item
+          icon="youtube_searched_for" 
+          item="item" 
+          label="{{item.titulo}}"
+          delete-function="$buscatransderivacionalListCtrl.data.deleteFunction([item.id])" 
+          open-detail="$buscatransderivacionalListCtrl.data.openDetail(item)">
+          
+       </st-grid-item>
+	  </div>
+</div>
+ 
+
+   
+      

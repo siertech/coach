@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$burndownDetalheCtrl.data.saveFunction($burndownDetalheCtrl.data.item)"
+	   delete-function = "$burndownDetalheCtrl.data.deleteFunction($burndownDetalheCtrl.data.item)"
+	   item = "$burndownDetalheCtrl.data.item"
+	   cancel-function = "$burndownDetalheCtrl.data.cancelFunction()"
+	   loading = "$burndownDetalheCtrl.data.loading"
+	   title  = "{{$burndownDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <md-tabs md-dynamic-height md-border-bottom>
+	        <md-tab label="Informações">
+		        <md-content class="md-padding">
+		              <burndown-form></burndown-form>
+		        </md-content>
+		     </md-tab>
+		     <md-tab label="Gráfico">
+		        <md-content class="md-padding" layout="row"  layout-padding>
+		              <canvas chart-colors="$burndownDetalheCtrl.burnDownChart.colors" flex id="line" class="chart chart-line" 
+		                    chart-data="$burndownDetalheCtrl.burnDownChart.data"
+							chart-labels="$burndownDetalheCtrl.burnDownChart.labels" chart-series="$burndownDetalheCtrl.burnDownChart.series" 
+							>
+					   </canvas>
+		        </md-content>
+		     </md-tab>
+		</md-tabs>
+</st-detalhe>

@@ -1,0 +1,14 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$frequenciasonoraDetalheCtrl.data.saveFunction($frequenciasonoraDetalheCtrl.data.item)"
+	   delete-function = "$frequenciasonoraDetalheCtrl.data.deleteFunction($frequenciasonoraDetalheCtrl.data.item)"
+	   item = "$frequenciasonoraDetalheCtrl.data.item"
+	   cancel-function = "$frequenciasonoraDetalheCtrl.data.cancelFunction()"
+	   loading = "$frequenciasonoraDetalheCtrl.data.loading"
+	   title  = "{{$frequenciasonoraDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <frequenciasonora-form></frequenciasonora-form>
+	   
+	   <youtube-video video-url="$frequenciasonoraDetalheCtrl.data.item.url"></youtube-video>
+</st-detalhe>

@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$entidadetesteDetalheCtrl.data.saveFunction($entidadetesteDetalheCtrl.data.item)"
+	   delete-function = "$entidadetesteDetalheCtrl.data.deleteFunction($entidadetesteDetalheCtrl.data.item)"
+	   item = "$entidadetesteDetalheCtrl.data.item"
+	   cancel-function = "$entidadetesteDetalheCtrl.data.cancelFunction()"
+	   loading = "$entidadetesteDetalheCtrl.data.loading"
+	   title  = "{{$entidadetesteDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <entidadeteste-form></entidadeteste-form>
+</st-detalhe>

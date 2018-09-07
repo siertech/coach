@@ -1,0 +1,16 @@
+﻿<meta charset="UTF-8" />
+<md-content layout="row" layout-wrap>
+   <md-card flex >
+          <md-card-content>
+          <div layout="row" layout-align="center center">
+              <h2><ng-md-icon md-colors="{color: 'green'}"  icon="event_available"></ng-md-icon> Como você está se sentindo?</h2>
+          </div>
+          <div layout="row" layout-align="center center">
+              <md-button  md-colors="{color: emo.color}" ng-repeat="emo in $diarioemocionalListCtrl.emotions" ng-click="$diarioemocionalListCtrl.submitEmotion(emo)" class="md-icon-button">
+                  <ng-md-icon icon="{{emo.icon}}"></ng-md-icon>
+              </md-button>
+           </div>
+          </md-card-content>
+      </md-card>
+ </md-content>
+

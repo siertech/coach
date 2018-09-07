@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$trilhaDetalheCtrl.data.saveFunction($trilhaDetalheCtrl.data.item)"
+	   delete-function = "$trilhaDetalheCtrl.data.deleteFunction($trilhaDetalheCtrl.data.item)"
+	   item = "$trilhaDetalheCtrl.data.item"
+	   cancel-function = "$trilhaDetalheCtrl.data.cancelFunction()"
+	   loading = "$trilhaDetalheCtrl.data.loading"
+	   title  = "{{$trilhaDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <trilha-form></trilha-form>
+</st-detalhe>

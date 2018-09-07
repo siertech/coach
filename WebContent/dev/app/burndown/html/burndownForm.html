@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap>
+   <div flex="100">
+       <ng-md-icon icon="calendar"></ng-md-icon>
+       Data de cadastro: {{$burndownDetalheCtrl.data.item.dataCadastro|date: 'dd/MM/yyyy'}}
+   </div>
+   <st-input-string flex="50" flex-xs="100"  label="Descrição do burndown" ng-model="$burndownDetalheCtrl.data.item.descricao" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Objeto" ng-model="$burndownDetalheCtrl.data.item.objectName" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Order By" ng-model="$burndownDetalheCtrl.data.item.orderBy" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Filtro de label" ng-model="$burndownDetalheCtrl.data.item.labelFilter" ></st-input-string>
+   <st-input-string flex="100" flex-xs="100"  label="Querys" ng-model="$burndownDetalheCtrl.data.item.querys" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Value Column" ng-model="$burndownDetalheCtrl.data.item.valueColumn" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Label Column" ng-model="$burndownDetalheCtrl.data.item.labelColumn" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Period Column" ng-model="$burndownDetalheCtrl.data.item.periodColumn" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Meta" ng-model="$burndownDetalheCtrl.data.item.valueMeta" ></st-input-string>
+   <st-input-string flex="50" flex-xs="100"  label="Data fim" ng-model="$burndownDetalheCtrl.data.item.dataFim" ></st-input-string>
+</div>

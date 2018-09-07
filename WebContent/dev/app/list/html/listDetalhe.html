@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$listDetalheCtrl.data.saveFunction($listDetalheCtrl.data.item)"
+	   delete-function = "$listDetalheCtrl.data.deleteFunction($listDetalheCtrl.data.item)"
+	   item = "$listDetalheCtrl.data.item"
+	   cancel-function = "$listDetalheCtrl.data.cancelFunction()"
+	   loading = "$listDetalheCtrl.data.loading"
+	   title  = "{{$listDetalheCtrl.data.item.titulo || 'Cadastro de novo Item'}}">
+	   
+	   <list-form></list-form>
+</st-detalhe>

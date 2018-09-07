@@ -1,0 +1,43 @@
+<meta charset="UTF-8" />
+<div layout="row" class="md-block" layout-wrap layout-align="center center">
+   <st-input-string flex="45" flex-xs="100"  label="Descrição do hábito" ng-model="$habitoDetalheCtrl.data.item.titulo" ></st-input-string>
+    <div   flex="45">
+	    <st-auto-complete    
+	       
+		     label-cad="Cadastrar categoria" 
+		     placeholder="Digite um termo para buscar"  
+		     object-name="Opcao"  
+		     attr="valor"
+		     label="Categoria do hábito"
+		     initial-busca=""                 
+		     value-only="true"
+		     fix-properties="{descricao:'categoria_habito'}" 
+		     ng-model="$habitoDetalheCtrl.data.item.categoria" 
+	     </st-auto-complete>
+     </div>
+   <st-string-check flex="100"
+       titulo = "Dias da semana"
+       items = "[
+          {label:'Domingo', attr: 1},
+          {label:'Segunda', attr: 2},
+          {label:'Terça', attr: 3},  
+          {label:'Quarta', attr: 4},
+          {label:'Quinta', attr: 5},
+          {label:'Sexta', attr: 6},
+          {label:'Sábado', attr: 7}
+           ]"
+        ng-model="$habitoDetalheCtrl.data.item.diasSemana"         
+     ></st-string-check>
+</div>
+ <md-divider></md-divider>
+<div layout="row">
+    <div flex-gt-md="50">
+         <p>Consequências ao cumprir a meta</p>
+	      <st-string-chip placeholder="Inserir item..." ng-model="$habitoDetalheCtrl.data.item.consequenciasCumprir"></st-string-chip>
+    </div>
+     <md-divider></md-divider>
+     <div flex-gt-md="50">
+         <p>Consequências ao não cumprir a meta</p>
+	      <st-string-chip placeholder="Inserir item..." ng-model="$habitoDetalheCtrl.data.item.consequenciasNaoCumprir"></st-string-chip>
+    </div>
+</div>

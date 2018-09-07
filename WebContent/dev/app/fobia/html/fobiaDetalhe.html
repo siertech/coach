@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+
+<st-detalhe
+	   save-function ="$fobiaDetalheCtrl.data.saveFunction($fobiaDetalheCtrl.data.item)"
+	   delete-function = "$fobiaDetalheCtrl.data.deleteFunction($fobiaDetalheCtrl.data.item)"
+	   item = "$fobiaDetalheCtrl.data.item"
+	   cancel-function = "$fobiaDetalheCtrl.data.cancelFunction()"
+	   loading = "$fobiaDetalheCtrl.data.loading"
+	   title  = "{{$fobiaDetalheCtrl.data.item._string.nome || 'Cadastro de novo Item'}}">
+	   
+	   <fobia-form></fobia-form>
+</st-detalhe>
