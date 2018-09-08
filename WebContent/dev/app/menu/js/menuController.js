@@ -19,7 +19,7 @@
 		var menuItems =  [
 			
 			{path: "list", icon:"playlist_add_check", label:"Listas"},
-			{path: "sprint", icon:"skip_next", label:"Sprint's"},
+			{path: "sprint", icon:"list", label:"Sprint's"},
 			{path: "proscontras", icon:"thumbs_up_down", label:"Prós e Contras"},
 			{path: "step", icon:"format_list_numbered", label:"Step By Step"},
 			{path: "inicio", icon:"home", label:"Início"},
