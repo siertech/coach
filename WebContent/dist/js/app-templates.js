@@ -1,4 +1,4 @@
-angular.module('stapi').run(['$templateCache', function($templateCache) {
+ angular.module('stapi').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('app/anotacao/html/anotacaoDetalhe.html',
