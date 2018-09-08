@@ -37,7 +37,11 @@
 		
 		ctrl.data.tableColumns = [
 			
-			{label: "Título", attr: "titulo", orderBy: true, labelIcon: "list"}
+			{label: "Título", attr: "titulo", orderBy: true, labelIcon: "list"},
+			{label: "Início", attr: "inicio", filter: "date: dd/MM/yyyy"},
+			{label: "Fim", attr: "fim", filter: "date: dd/MM/yyyy"},
+			{label: "Resta(m)", attr: "fim", filter: "metaCountDown"},
+			{label: "Meta", attr: "meta.titulo"}
 			
 		];
 	
@@ -47,7 +51,8 @@
 		//Objeto que define as opções para listagem dos itens
 		ctrl.data.requestListParams = {	
 				objectName: objectName,
-				maxItensPerPage: config.confs.maxItemsPerPage || 9
+				extra: "order by  inicio ASC",
+				maxItensPerPage: config.confs.maxItemsPerPage || 25
 
 		}
 		

@@ -2,6 +2,7 @@
 <md-tabs md-dynamic-height md-border-bottom>
      <md-tab label="Sumário">
          <md-content  layout="row" layout-padding>
+         
               <st-input-string flex="50" flex-xs="100"  label="Título" ng-model="$sprintDetalheCtrl.data.item.titulo" ></st-input-string>
               <st-input-date flex="50" flex-xs="100"  label="Início" ng-model="$sprintDetalheCtrl.data.item.inicio" ></st-input-date>
               <st-input-date flex="50" flex-xs="100"  label="Fim" ng-model="$sprintDetalheCtrl.data.item.fim" ></st-input-date>
@@ -15,6 +16,7 @@
 				            <md-card-content>
 				            <st-check-list 
 								    attr-label="titulo" 
+								    show-border-no-items="true"
 								    hide-checkbox="true"
 								    hide-delete-all="true"
 								    crud-options = "{objectName: 'TarefaSprint', fixProperties: {'sprint.id': $sprintDetalheCtrl.data.item.id, status: 'todo'}}"
@@ -28,6 +30,7 @@
 				            <md-card-content>
 				             <st-check-list 
 								    attr-label="titulo" 
+								    show-border-no-items="true"
 								    hide-add = "true"
 								    hide-checkbox="true"
 								    crud-options = "{objectName: 'TarefaSprint', fixProperties: {'sprint.id': $sprintDetalheCtrl.data.item.id, status: 'do'}}"
@@ -41,6 +44,7 @@
 				            <md-card-content>
 				             <st-check-list 
 								    attr-label="titulo" 
+								    show-border-no-items="true"
 								    hide-checkbox="true"
 								    hide-add = "true"
 								    crud-options = "{objectName: 'TarefaSprint', fixProperties: {'sprint.id': $sprintDetalheCtrl.data.item.id, status: 'done'}}"

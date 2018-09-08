@@ -6587,7 +6587,11 @@ return Simditor.i18n;
 		
 		ctrl.data.tableColumns = [
 			
-			{label: "Título", attr: "titulo", orderBy: true, labelIcon: "list"}
+			{label: "Título", attr: "titulo", orderBy: true, labelIcon: "list"},
+			{label: "Início", attr: "inicio", filter: "date: dd/MM/yyyy"},
+			{label: "Fim", attr: "fim", filter: "date: dd/MM/yyyy"},
+			{label: "Resta(m)", attr: "fim", filter: "metaCountDown"},
+			{label: "Meta", attr: "meta.titulo"}
 			
 		];
 	
@@ -6597,7 +6601,7 @@ return Simditor.i18n;
 		//Objeto que define as opções para listagem dos itens
 		ctrl.data.requestListParams = {	
 				objectName: objectName,
-				maxItensPerPage: config.confs.maxItemsPerPage || 9
+				maxItensPerPage: config.confs.maxItemsPerPage || 25
 
 		}
 		
@@ -13347,6 +13351,7 @@ return Simditor.i18n;
 		var menuItems =  [
 			
 			{path: "list", icon:"playlist_add_check", label:"Listas"},
+			{path: "proscontras", icon:"skip_next", label:"Prós e Contras"},
 			{path: "proscontras", icon:"thumbs_up_down", label:"Prós e Contras"},
 			{path: "step", icon:"format_list_numbered", label:"Step By Step"},
 			{path: "inicio", icon:"home", label:"Início"},
