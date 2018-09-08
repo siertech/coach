@@ -23,12 +23,15 @@
 
 		var ctrl = this;
 		
-		angular.extend(ctrl, $controller('genericListController', {
+		angular.extend(ctrl, $controller('genericListControl', {
 			$scope: $scope,
-			objectName: objectName,
-			detalheTemplateUrl:"app/sprint/html/sprintDetalhe.html",
-			detalheController: "sprintDetalheCtrl",
-			detalheControllerAs: "$sprintDetalheCtrl",
+			options:{
+				objectName: objectName,
+				detalheTemplateUrl:"app/sprint/html/sprintDetalhe.html",
+				detalheController: "sprintDetalheCtrl",
+				detalheControllerAs: "$sprintDetalheCtrl",
+				fixProperties: ctrl.fixProperties || {}
+			},
 			filtros:  [ 
 				{attr:'titulo', label: ' Buscar pelo nomeprincipal'}
 
