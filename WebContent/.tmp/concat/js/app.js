@@ -6601,6 +6601,7 @@ return Simditor.i18n;
 		//Objeto que define as opções para listagem dos itens
 		ctrl.data.requestListParams = {	
 				objectName: objectName,
+				extra: "order by  inicio ASC",
 				maxItensPerPage: config.confs.maxItemsPerPage || 25
 
 		}
@@ -13351,7 +13352,7 @@ return Simditor.i18n;
 		var menuItems =  [
 			
 			{path: "list", icon:"playlist_add_check", label:"Listas"},
-			{path: "proscontras", icon:"skip_next", label:"Prós e Contras"},
+			{path: "sprint", icon:"skip_next", label:"Sprint's"},
 			{path: "proscontras", icon:"thumbs_up_down", label:"Prós e Contras"},
 			{path: "step", icon:"format_list_numbered", label:"Step By Step"},
 			{path: "inicio", icon:"home", label:"Início"},
