@@ -30,6 +30,7 @@
 				detalheTemplateUrl:"app/sprint/html/sprintDetalhe.html",
 				detalheController: "sprintDetalheCtrl",
 				detalheControllerAs: "$sprintDetalheCtrl",
+				fixQuerys : ctrl.fixQuerys,
 				fixProperties: ctrl.fixProperties || {}
 			},
 			filtros:  [ 

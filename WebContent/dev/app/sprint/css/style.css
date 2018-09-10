@@ -1,1 +1,9 @@
 /*-- Sprint CSS --*/
+
+  .st-check-list ul[dnd-list] li {
+
+    border: 1px dotted;
+    padding: 15px 5px 2px 15px;
+    margin: 5px;
+    border-left: 5px solid #4657b7;
+   }

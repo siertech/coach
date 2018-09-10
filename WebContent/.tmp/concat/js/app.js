@@ -15,7 +15,7 @@ app.factory('config',function(){
 		confs:{
 				path: "Coach",
 				securityPaths: "all", //paths da aplicação onde a autenticação no sistema é necessária
-				appVersion: "1.0",
+				appVersion: "2.0",
 				initialPath: "/inicio",
 				loginPath: "/login",
 				notFoundPath:"/notfound",
@@ -13342,10 +13342,11 @@ return Simditor.i18n;
 
 	.controller("menuCtrl", menuCtrl);
 
-	function menuCtrl($scope, $controller, $location){
+	function menuCtrl($scope, $controller, $location, config){
 
 		var ctrl = this;
 		ctrl.scope = $scope;
+		ctrl.appVersion = config.confs.appVersion;
 		
 		ctrl.toPath = function(path){
 			

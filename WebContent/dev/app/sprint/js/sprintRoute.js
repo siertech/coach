@@ -6,7 +6,7 @@
 	//Rota para listagem dos objetos
 	$routeProvider.when("/sprint",{
 
-		template:"<sprint-list ></sprint-list>",
+		templateUrl:"app/sprint/html/sprintRoute.html",
 	    
 	}); 
 

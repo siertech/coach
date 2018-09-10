@@ -20,6 +20,9 @@ public  class Sprint extends CrudClass {
 	@JsonView(com.siertech.stapi.util.Views.Public.class)
 	private String titulo;
 	
+	@JsonView(com.siertech.stapi.util.Views.Public.class)
+	private int finalizada;
+	
 	@JsonView(Views.Public.class)
 	@Column( length = 100000 )
 	private String descricao;

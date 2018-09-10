@@ -6,10 +6,11 @@
 
 	.controller("menuCtrl", menuCtrl);
 
-	function menuCtrl($scope, $controller, $location){
+	function menuCtrl($scope, $controller, $location, config){
 
 		var ctrl = this;
 		ctrl.scope = $scope;
+		ctrl.appVersion = config.confs.appVersion;
 		
 		ctrl.toPath = function(path){
 			

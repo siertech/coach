@@ -15,7 +15,7 @@ app.factory('config',function(){
 		confs:{
 				path: "Coach",
 				securityPaths: "all", //paths da aplicação onde a autenticação no sistema é necessária
-				appVersion: "1.0",
+				appVersion: "2.0",
 				initialPath: "/inicio",
 				loginPath: "/login",
 				notFoundPath:"/notfound",

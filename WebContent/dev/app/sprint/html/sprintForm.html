@@ -6,16 +6,20 @@
               <st-input-string flex="50" flex-xs="100"  label="Título" ng-model="$sprintDetalheCtrl.data.item.titulo" ></st-input-string>
               <st-input-date flex="50" flex-xs="100"  label="Início" ng-model="$sprintDetalheCtrl.data.item.inicio" ></st-input-date>
               <st-input-date flex="50" flex-xs="100"  label="Fim" ng-model="$sprintDetalheCtrl.data.item.fim" ></st-input-date>
+              <div flex="50" flex-xs="100" >
+			      <md-checkbox  ng-change="$sprintDetalheCtrl.data.saveFunction($sprintDetalheCtrl.data.item)" ng-true-value="1" ng-false-value="0" ng-model="$sprintDetalheCtrl.data.item.finalizada">Finalizada</md-checkbox>
+			   </div>
          </md-content>
       </md-tab>
       <md-tab label="Kanban" >
            <md-content layout="row" layout-padding>
-				     <md-card layout="column" flex="33" >
-				            <h3><ng-md-icon md-colors="{color: 'primary'}"  icon="format_list_numbered"></ng-md-icon> Tarefas</h3>
+				     <md-card layout="column" flex="33"  style="border-left: 3px solid #3f51b5">
+				            <h4><ng-md-icon md-colors="{color: 'primary'}"  icon="format_list_numbered"></ng-md-icon> TAREFAS  [{{$sprintDetalheCtrl.tarefasTodo.length}}]</h4>
 				            <md-divider></md-divider>
 				            <md-card-content>
 				            <st-check-list 
 								    attr-label="titulo" 
+								    objetos = "$sprintDetalheCtrl.tarefasTodo"
 								    show-border-no-items="true"
 								    hide-checkbox="true"
 								    hide-delete-all="true"
@@ -23,13 +27,15 @@
 								    ></st-check-list>
 				            </md-card-content>
 				  	 </md-card>
-				    <md-card layout="column"  flex="33" >
+				    <md-card layout="column"  flex="33"  style="border-left: 3px solid orange" >
 				            
-				            <h3><ng-md-icon md-colors="{color: 'orange'}"  icon="access_time"></ng-md-icon> Fazendo</h3>
+				            <h4><ng-md-icon md-colors="{color: 'orange'}"  icon="access_time"></ng-md-icon> FAZENDO [{{$sprintDetalheCtrl.tarefasDo.length}}]</h4>
 				            <md-divider></md-divider>
 				            <md-card-content>
 				             <st-check-list 
+				                    objetos = "$sprintDetalheCtrl.tarefasDo"
 								    attr-label="titulo" 
+								    hide-delete-all="true"
 								    show-border-no-items="true"
 								    hide-add = "true"
 								    hide-checkbox="true"
@@ -38,12 +44,14 @@
 				            </md-card-content>
 				            </md-card-content>
 				  	 </md-card>
-				     <md-card layout="column" flex="33" >
-				            <h3><ng-md-icon md-colors="{color: 'green'}"  icon="playlist_add_check"></ng-md-icon> Feito</h3>
+				     <md-card layout="column" flex="33"  style="border-left: 3px solid green">
+				            <h4><ng-md-icon md-colors="{color: 'green'}"  icon="playlist_add_check"></ng-md-icon> FEITO [{{$sprintDetalheCtrl.tarefasTodo.length}}]</h4>
 				            <md-divider></md-divider>
 				            <md-card-content>
 				             <st-check-list 
+				                    objetos = "$sprintDetalheCtrl.tarefasDone"
 								    attr-label="titulo" 
+								    hide-delete-all="true"
 								    show-border-no-items="true"
 								    hide-checkbox="true"
 								    hide-add = "true"

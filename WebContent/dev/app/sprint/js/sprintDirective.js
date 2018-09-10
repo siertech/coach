@@ -32,6 +32,7 @@
 			controller: "sprintListCtrl",
 			controllerAs:"$sprintListCtrl",
 			scope:{
+				fixQuerys: "<",
 				fixProperties: "<",
 				hideFilter: "<",
 				hidePagination: "<",
