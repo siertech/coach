@@ -1,5 +1,5 @@
 ﻿<meta charset="UTF-8" />
-<md-card style="padding-top: 15px;" ng-hide="$metaListCtrl.hideFilter==true">
+<md-card style="padding-top: 15px;" ng-hide="$sprintListCtrl.hideFilter==true">
         <md-toolbar class="md-table-toolbar md-default">
 	          <div layout="row" class="md-toolbar-tools"  layout-wrap>
 		           <div flex="20"  hide-xs md-hide-xs>
@@ -21,7 +21,7 @@
          </md-toolbar>
 </md-card>
 
-	<float-button-add ng-hide="$metaListCtrl.hideButtonAdd==true"  class="float-add-button" tooltip-label="Cadastrar novo sprint" ng-click="$sprintListCtrl.data.openDetail()" ></float-button-add>
+	<float-button-add ng-hide="$sprintListCtrl.hideButtonAdd==true"  class="float-add-button" tooltip-label="Cadastrar novo sprint" ng-click="$sprintListCtrl.data.openDetail()" ></float-button-add>
 	<div layout="row" style="margin:8px">
 	    <md-progress-linear
 	          flex
@@ -42,7 +42,7 @@
     </div>
    
     <st-filter-pagination
-         ng-hide="$metaListCtrl.hidePagination==true" 
+         ng-hide="$sprintListCtrl.hidePagination==true" 
 	     total-itens="$sprintListCtrl.data.totalItens" 
 	     itens-in-page="$sprintListCtrl.data.objetos.length" 
 	     get-list="$sprintListCtrl.data.getList" 

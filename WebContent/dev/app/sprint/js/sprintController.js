@@ -10,6 +10,8 @@
 	function sprintDetalheCtrl($scope, $controller, item, functionToDetailNotify, objectName, stUtil){
 
 		var ctrl = this;
+		item._string = item._string  || {};
+		item._string.finalizada = item._string.finalizada  || "false";
 		angular.extend(ctrl, $controller('genericDetalheController', {
 			$scope: $scope,
 			functionToDetailNotify: functionToDetailNotify,
@@ -34,7 +36,8 @@
 				fixProperties: ctrl.fixProperties || {}
 			},
 			filtros:  [ 
-				{attr:'titulo', label: ' Buscar pelo nomeprincipal'}
+				{attr:'titulo', label: ' Buscar pelo título'},
+				{attr:'meta.titulo', label: ' Buscar pelo título da meta'}
 
 				]
 		}));

@@ -5,20 +5,15 @@
 			        <md-button ng-click="$menuCtrl.data.toggleSideNav()" class="md-icon-button" aria-label="Settings">
 			           <ng-md-icon icon="menu"></ng-md-icon> 
 			        </md-button>
-			        <md-button href="#/inicio" class="md-icon-button" aria-label="Settings">
-			           <ng-md-icon  icon="home"></ng-md-icon> 
-			        </md-button>
+			        
 			        <md-divider></md-divider>
-			       <h2 hide-xs  md-truncate>Coach.me - <i>Planejamento, método e disciplina!</i></h2>
+			       <h2 hide-xs  md-truncate style="font-size: 25px;"><span style="font-weight: 700;" md-colors="{'color': 'orange'}">SIS</span><span>COACH</span></h2>
 			        <span flex="10"></span>
 			       
-			        <st-breadcumb ng-disabled="true" hide show-gt-xs></st-breadcumb>
-			        <!--  
-				    <button-filial></button-filial>
-				    -->
+			       
 				    <md-button ng-click="$menuCtrl.toPath('relatorio')" >
 			           <ng-md-icon md-colors="{color: 'orange'}" icon="pie_chart"></ng-md-icon> 
-			            Relatórios
+			            Relatórios2
 			        </md-button>
 			        
 			        <md-button ng-click="$menuCtrl.toPath('todaytask')" >
@@ -26,7 +21,9 @@
 			            Tarefas
 			        </md-button>
 			        <span flex></span>
-			        <span>{{$menuCtrl.appVersion}}</span>
+			         <md-button ng-click="$menuCtrl.data.toggleSideNav()" class="md-icon-button" aria-label="Settings">
+			           <ng-md-icon icon="person"></ng-md-icon> 
+			        </md-button>
 			    </div>
 		 </md-toolbar>
 	    
@@ -37,8 +34,8 @@
                
               <md-toolbar layout="row">
 		          <div class="md-toolbar-tools">
-		              <h2>Opções</h2>
-		             <span flex></span>
+		             <h2  md-truncate style="font-size: 25px;"><span style="font-weight: 700;" md-colors="{'color': 'orange'}">SIS</span><span>COACH</span></h2>
+						<span flex></span>
 		            <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="$menuCtrl.data.toggleSideNav()">
 		              <md-tooltip>Fechar</md-tooltip>
 		               <ng-md-icon icon="close"></ng-md-icon> 

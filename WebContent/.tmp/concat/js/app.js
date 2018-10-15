@@ -15,7 +15,7 @@ app.factory('config',function(){
 		confs:{
 				path: "Coach",
 				securityPaths: "all", //paths da aplicação onde a autenticação no sistema é necessária
-				appVersion: "2.0",
+				appVersion: "2.1",
 				initialPath: "/inicio",
 				loginPath: "/login",
 				notFoundPath:"/notfound",
@@ -6560,6 +6560,8 @@ return Simditor.i18n;
 	function sprintDetalheCtrl($scope, $controller, item, functionToDetailNotify, objectName, stUtil){
 
 		var ctrl = this;
+		item._string = item._string  || {};
+		item._string.finalizada = item._string.finalizada  || "false";
 		angular.extend(ctrl, $controller('genericDetalheController', {
 			$scope: $scope,
 			functionToDetailNotify: functionToDetailNotify,
@@ -6580,10 +6582,12 @@ return Simditor.i18n;
 				detalheTemplateUrl:"app/sprint/html/sprintDetalhe.html",
 				detalheController: "sprintDetalheCtrl",
 				detalheControllerAs: "$sprintDetalheCtrl",
+				fixQuerys : ctrl.fixQuerys,
 				fixProperties: ctrl.fixProperties || {}
 			},
 			filtros:  [ 
-				{attr:'titulo', label: ' Buscar pelo nomeprincipal'}
+				{attr:'titulo', label: ' Buscar pelo título'},
+				{attr:'meta.titulo', label: ' Buscar pelo título da meta'}
 
 				]
 		}));
@@ -6666,6 +6670,7 @@ return Simditor.i18n;
 			controller: "sprintListCtrl",
 			controllerAs:"$sprintListCtrl",
 			scope:{
+				fixQuerys: "<",
 				fixProperties: "<",
 				hideFilter: "<",
 				hidePagination: "<",
@@ -6733,7 +6738,7 @@ return Simditor.i18n;
 	//Rota para listagem dos objetos
 	$routeProvider.when("/sprint",{
 
-		template:"<sprint-list ></sprint-list>",
+		templateUrl:"app/sprint/html/sprintRoute.html",
 	    
 	}); 
 

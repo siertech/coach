@@ -2,7 +2,8 @@
 <md-tabs md-dynamic-height md-border-bottom>
       <md-tab label="Em execução">
 	         <md-content  layout="column" layout-padding>
-	             <sprint-list fix-querys="['current_date() between inicio and fim', 'finalizada=0']"></sprint-list>
+	        
+	             <sprint-list hide-filter="true"  hide-button-add="true" fix-querys="['current_date() between inicio and fim', '_string[\'finalizada\']  <> \'true\'']"></sprint-list>
 	         </md-content>
        </md-tab>
       <md-tab label="Todas as sprint's">

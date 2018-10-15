@@ -14,7 +14,7 @@
 		           Hábitos em  {{$habitosubmitListCtrl.today|date:'dd/MM/yyyy'}} [{{$habitosubmitListCtrl.mergedHabits.length}}]
 		       </md-subheader>
 		       
-		       <div ng-show="!$habitosubmitListCtrl.verSomenteNaoCumpridos==1 || (item.submitedInToday==false || !item.submitedInToday)"   id="merged-habits-index-{{$index}}" ng-repeat="item in $habitosubmitListCtrl.mergedHabits | orderBy :'categoria'  | habitoGroupBy:'categoria' ">
+		       <div ng-if="!$habitosubmitListCtrl.verSomenteNaoCumpridos==1 || (item.submitedInToday==false || !item.submitedInToday)"   id="merged-habits-index-{{$index}}" ng-repeat="item in $habitosubmitListCtrl.mergedHabits | orderBy :'categoria'  | habitoGroupBy:'categoria' ">
 			             <md-subheader  ng-show="item.categoria_CHANGED" class="md-no-sticky">
 			                <ng-md-icon icon="stars" md-colors="{color: 'green'}"></ng-md-icon> {{item.categoria|| 'Outros'}}
 			             </md-subheader>

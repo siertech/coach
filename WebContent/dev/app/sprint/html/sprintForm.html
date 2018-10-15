@@ -7,7 +7,7 @@
               <st-input-date flex="50" flex-xs="100"  label="Início" ng-model="$sprintDetalheCtrl.data.item.inicio" ></st-input-date>
               <st-input-date flex="50" flex-xs="100"  label="Fim" ng-model="$sprintDetalheCtrl.data.item.fim" ></st-input-date>
               <div flex="50" flex-xs="100" >
-			      <md-checkbox  ng-change="$sprintDetalheCtrl.data.saveFunction($sprintDetalheCtrl.data.item)" ng-true-value="1" ng-false-value="0" ng-model="$sprintDetalheCtrl.data.item.finalizada">Finalizada</md-checkbox>
+			      <md-checkbox  ng-change="$sprintDetalheCtrl.data.saveFunction($sprintDetalheCtrl.data.item)" ng-true-value="'true'" ng-false-value="'false'" ng-model="$sprintDetalheCtrl.data.item._string.finalizada">Finalizada</md-checkbox>
 			   </div>
          </md-content>
       </md-tab>
